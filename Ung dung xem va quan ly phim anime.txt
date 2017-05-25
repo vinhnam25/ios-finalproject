@@ -1,0 +1,46 @@
+Phan he User:
+-------------------------------------
+1 Dang nhap (api/TaiKhoan/Login)
+
+2 Dang ky (api/TaiKhoan/Register)
+
+3 Xem danh sach phim theo the loai, nhom dich, nha san xuat, nam phat hanh  ( api/Phim/DSTheoLoai/{id} )
+
+4 Tim kiem phim theo nhieu tieu chi
+
+5 Chon 1 bo phim, sau do chon tap phim de xem
+
+6 Neu user da dang nhap app thi cho phep vao kho phim cua minh tai man hinh xem phim hoac man hinh hien thi danh sach
+
+7 Nhan thong bao phim moi cho cac user co tai khoan
+
+8 Cap nhat thong tin tai khoan
+
+9 Gop y
+
+10 Xem thong tin chi tiet phim
+
+11 Xem lich chieu phim
+
+12 Bang xep hang
+
+Phan he admin:
+-------------------------------------
+1. Quan ly phim ( them, sua) 
+	api/Phim/Them, 
+	api/Phim/CapNhat
+
+2. Quan ly the loai phim ( them, xoa, sua)
+
+3. Quan ly nha san xuat ( them, xoa, sua)
+
+4. Quan ly nhom dich (them, xoa, sua)
+
+5. Quan ly tai khoan user (them, sua)
+
+6. Quan ly lich chieu phim (them, xoa, sua)
+
+7. Xem Thong ke the loai phim duoc xem nhieu nhat theo ngay, thang, nam
+
+Chuc nang khac:
++ Multi language
