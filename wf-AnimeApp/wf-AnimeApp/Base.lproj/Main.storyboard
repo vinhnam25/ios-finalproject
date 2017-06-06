@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gTK-sa-cWG">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,6 +10,452 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="2Ju-ag-haV">
+            <objects>
+                <viewController storyboardIdentifier="vcLogin" id="FDD-ax-z8d" customClass="loginViewController" customModule="wf_AnimeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xSB-xk-AtO"/>
+                        <viewControllerLayoutGuide type="bottom" id="pzd-4R-EVa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3V0-g6-KXg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bZf-gQ-4r7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LfX-vh-uT1">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cAm-zZ-WSP"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="Đăng nhập" id="Rlm-db-wBA">
+                                        <barButtonItem key="leftBarButtonItem" image="icon_home" id="3gT-Ro-KIR">
+                                            <connections>
+                                                <action selector="backButton_click:" destination="FDD-ax-z8d" id="1fg-qU-02O"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zf-4k-ut7" customClass="DesignableButton" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="94.666666666666686" y="291" width="225" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="FTI-HD-pk8"/>
+                                    <constraint firstAttribute="height" constant="45" id="r9b-zW-QtP"/>
+                                </constraints>
+                                <state key="normal" title="Đăng nhập">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButton:" destination="FDD-ax-z8d" eventType="touchUpInside" id="8d5-XK-xPP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLQ-If-fHx" customClass="DesignableLable" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="39.666666666666657" y="351" width="335" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="ISb-3w-uA7"/>
+                                    <constraint firstAttribute="width" constant="335" id="ip8-qF-t5G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="wborderBottom">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderBottom">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chưa có tài khoản ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fP1-mq-Dqd">
+                                <rect key="frame" x="94.666666666666686" y="452" width="225" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="KYp-Ld-rYd"/>
+                                    <constraint firstAttribute="width" constant="225" id="nPM-d6-goc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quên mật khẩu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3y-dy-Fmv">
+                                <rect key="frame" x="94.666666666666686" y="398" width="225" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="37i-MP-Wpg"/>
+                                    <constraint firstAttribute="height" constant="36" id="iPR-se-VXr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y6q-lx-OV4" customClass="DesignableTextField" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="94.666666666666686" y="213" width="225" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="CNU-A0-3zX"/>
+                                    <constraint firstAttribute="width" constant="225" id="ayC-cE-VVd"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="lock-128"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tên đăng nhập" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I98-M9-yZP" customClass="DesignableTextField" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="94.666666666666686" y="158" width="225" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5019110576923077" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="0l9-3W-Phf"/>
+                                    <constraint firstAttribute="height" constant="45" id="24T-BD-WMd"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="username-icon"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9X-eD-Y3b" customClass="DesignableButton" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="91" y="496" width="232" height="54"/>
+                                <color key="backgroundColor" red="0.38113541666666662" green="0.38113541666666662" blue="0.38113541666666662" alpha="0.38502403846153849" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="Uzr-md-RtT"/>
+                                    <constraint firstAttribute="height" constant="54" id="nCR-RK-AvM"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Tạo tài khoản">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="0EC-Dn-GCx" kind="presentation" modalTransitionStyle="coverVertical" id="lhb-zQ-0OL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fP1-mq-Dqd" firstAttribute="top" secondItem="O3y-dy-Fmv" secondAttribute="bottom" constant="18" id="47X-ed-5bq"/>
+                            <constraint firstItem="bZf-gQ-4r7" firstAttribute="top" secondItem="3V0-g6-KXg" secondAttribute="top" id="4oo-VI-dnu"/>
+                            <constraint firstItem="y6q-lx-OV4" firstAttribute="top" secondItem="I98-M9-yZP" secondAttribute="bottom" constant="10" id="82z-rp-3oN"/>
+                            <constraint firstItem="t9X-eD-Y3b" firstAttribute="top" secondItem="fP1-mq-Dqd" secondAttribute="bottom" constant="8" id="8Ll-7q-8V8"/>
+                            <constraint firstItem="I98-M9-yZP" firstAttribute="top" secondItem="LfX-vh-uT1" secondAttribute="bottom" constant="94" id="A2D-LH-J8P"/>
+                            <constraint firstItem="LfX-vh-uT1" firstAttribute="centerX" secondItem="3V0-g6-KXg" secondAttribute="centerX" id="BA3-ih-MH4"/>
+                            <constraint firstItem="aLQ-If-fHx" firstAttribute="top" secondItem="3Zf-4k-ut7" secondAttribute="bottom" constant="15" id="FSK-ZE-oFN"/>
+                            <constraint firstItem="I98-M9-yZP" firstAttribute="centerX" secondItem="3V0-g6-KXg" secondAttribute="centerX" id="H1y-cl-rHe"/>
+                            <constraint firstItem="LfX-vh-uT1" firstAttribute="leading" secondItem="3V0-g6-KXg" secondAttribute="leading" id="MRV-lO-EIK"/>
+                            <constraint firstItem="3Zf-4k-ut7" firstAttribute="centerX" secondItem="I98-M9-yZP" secondAttribute="centerX" id="Orz-LG-4cN"/>
+                            <constraint firstAttribute="trailing" secondItem="LfX-vh-uT1" secondAttribute="trailing" id="SHP-ee-NrB"/>
+                            <constraint firstItem="bZf-gQ-4r7" firstAttribute="leading" secondItem="3V0-g6-KXg" secondAttribute="leading" id="T7E-cP-Esv"/>
+                            <constraint firstItem="O3y-dy-Fmv" firstAttribute="top" secondItem="aLQ-If-fHx" secondAttribute="bottom" constant="25" id="Wxo-5e-wfP"/>
+                            <constraint firstItem="t9X-eD-Y3b" firstAttribute="centerX" secondItem="3V0-g6-KXg" secondAttribute="centerX" id="X2n-AY-jbO"/>
+                            <constraint firstAttribute="trailing" secondItem="bZf-gQ-4r7" secondAttribute="trailing" id="b4u-wB-2yi"/>
+                            <constraint firstItem="O3y-dy-Fmv" firstAttribute="centerX" secondItem="3V0-g6-KXg" secondAttribute="centerX" id="cMO-k5-K4S"/>
+                            <constraint firstItem="3Zf-4k-ut7" firstAttribute="top" secondItem="y6q-lx-OV4" secondAttribute="bottom" constant="33" id="er2-el-u6s"/>
+                            <constraint firstItem="fP1-mq-Dqd" firstAttribute="centerX" secondItem="3V0-g6-KXg" secondAttribute="centerX" id="g9a-El-fPx"/>
+                            <constraint firstItem="aLQ-If-fHx" firstAttribute="centerX" secondItem="3V0-g6-KXg" secondAttribute="centerX" id="icY-lp-0iv"/>
+                            <constraint firstItem="LfX-vh-uT1" firstAttribute="top" secondItem="xSB-xk-AtO" secondAttribute="bottom" id="jme-z6-ap4"/>
+                            <constraint firstItem="bZf-gQ-4r7" firstAttribute="centerX" secondItem="I98-M9-yZP" secondAttribute="centerX" id="mcO-mi-Yeg"/>
+                            <constraint firstItem="y6q-lx-OV4" firstAttribute="centerX" secondItem="I98-M9-yZP" secondAttribute="centerX" id="nJO-QI-O1M"/>
+                            <constraint firstItem="pzd-4R-EVa" firstAttribute="top" secondItem="bZf-gQ-4r7" secondAttribute="bottom" id="uOT-Vh-3aH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgImageView" destination="bZf-gQ-4r7" id="Ysk-9Y-Jyk"/>
+                        <outlet property="loginBar" destination="LfX-vh-uT1" id="58J-mK-hCd"/>
+                        <outlet property="passTextField" destination="y6q-lx-OV4" id="yDm-vo-Fep"/>
+                        <outlet property="usernameTextField" destination="I98-M9-yZP" id="Aqa-Ga-sTz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4c-wE-fpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="701.25" y="-642.25352112676057"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="WaE-y7-ZBK">
+            <objects>
+                <viewController id="0EC-Dn-GCx" customClass="signupViewController" customModule="wf_AnimeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gka-Ol-TIa"/>
+                        <viewControllerLayoutGuide type="bottom" id="866-7Q-bTX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Hc-gx-Agy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_login" translatesAutoresizingMaskIntoConstraints="NO" id="GuE-Je-M2E">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KC2-EF-bdL" customClass="DesignableTextField" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="94.666666666666686" y="292" width="225" height="43"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="bz6-Iu-oP8"/>
+                                    <constraint firstAttribute="width" constant="225" id="jgm-tI-uX8"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="icon_email"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Họ tên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M2g-37-Fgu" customClass="DesignableTextField" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="94.666666666666686" y="344" width="225" height="43"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="gYP-Ig-G5H"/>
+                                    <constraint firstAttribute="width" constant="225" id="oBe-IW-8Fj"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="icon_fn"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Nhập lại mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y52-k7-EIq" customClass="DesignableTextField" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="94.666666666666686" y="229" width="225" height="43"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="72I-PX-386"/>
+                                    <constraint firstAttribute="width" constant="225" id="I6p-bD-bSb"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="lock-128"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Msn-77-MtZ" customClass="DesignableTextField" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="94.666666666666686" y="176" width="225" height="43"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="1ql-br-mQ7"/>
+                                    <constraint firstAttribute="width" constant="225" id="rTI-J0-y3g"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="lock-128"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng ký" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5v-Vm-LkZ" customClass="DesignableLable" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="74" y="41" width="266" height="51"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="Gk2-dz-AAe"/>
+                                    <constraint firstAttribute="height" constant="51" id="TbX-Id-mdX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderBottom">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Tên đăng nhập" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4x-ov-Fk3" customClass="DesignableTextField" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="94.666666666666686" y="124" width="225" height="43"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="YI9-TU-XxR"/>
+                                    <constraint firstAttribute="width" constant="225" id="oks-YP-Pxx"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="username-icon"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8o-xa-9ex" customClass="DesignableButton" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="74" y="429" width="266" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Owt-78-dRa"/>
+                                    <constraint firstAttribute="width" constant="266" id="bBC-9f-9NI"/>
+                                </constraints>
+                                <state key="normal" title="Tạo tài khoản">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerButton:" destination="0EC-Dn-GCx" eventType="touchUpInside" id="sfr-Y4-tRM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zae-cU-rc0" customClass="DesignableLable" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="74" y="393" width="266" height="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Gdk-MH-eZd"/>
+                                    <constraint firstAttribute="width" constant="266" id="eD7-0J-SZE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderBottom">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGW-Te-9I7" customClass="DesignableButton" customModule="wf_AnimeApp" customModuleProvider="target">
+                                <rect key="frame" x="74" y="489" width="266" height="45"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="0.19455528850000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="m1H-t1-fn8"/>
+                                    <constraint firstAttribute="height" constant="45" id="yqC-U1-p6C"/>
+                                </constraints>
+                                <state key="normal" title="Đăng nhập">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButton:" destination="0EC-Dn-GCx" eventType="touchUpInside" id="QhK-zs-Izp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M2g-37-Fgu" firstAttribute="centerX" secondItem="1Hc-gx-Agy" secondAttribute="centerX" id="0fX-cd-bXM"/>
+                            <constraint firstItem="J8o-xa-9ex" firstAttribute="centerX" secondItem="1Hc-gx-Agy" secondAttribute="centerX" id="7Cb-Wf-hMY"/>
+                            <constraint firstItem="B5v-Vm-LkZ" firstAttribute="top" secondItem="Gka-Ol-TIa" secondAttribute="bottom" constant="21" id="HiD-ZM-zkJ"/>
+                            <constraint firstItem="y52-k7-EIq" firstAttribute="centerX" secondItem="1Hc-gx-Agy" secondAttribute="centerX" id="ICn-z7-ntH"/>
+                            <constraint firstItem="J8o-xa-9ex" firstAttribute="top" secondItem="zae-cU-rc0" secondAttribute="bottom" constant="15" id="JFg-d0-mCM"/>
+                            <constraint firstItem="g4x-ov-Fk3" firstAttribute="centerX" secondItem="1Hc-gx-Agy" secondAttribute="centerX" id="SFR-w2-h7H"/>
+                            <constraint firstItem="BGW-Te-9I7" firstAttribute="top" secondItem="J8o-xa-9ex" secondAttribute="bottom" constant="15" id="V7O-bN-7yY"/>
+                            <constraint firstItem="M2g-37-Fgu" firstAttribute="top" secondItem="KC2-EF-bdL" secondAttribute="bottom" constant="9" id="XBH-ov-xd4"/>
+                            <constraint firstItem="zae-cU-rc0" firstAttribute="top" secondItem="M2g-37-Fgu" secondAttribute="bottom" constant="6" id="aGw-h9-Pva"/>
+                            <constraint firstItem="y52-k7-EIq" firstAttribute="top" secondItem="Msn-77-MtZ" secondAttribute="bottom" constant="10" id="fqv-VC-jpX"/>
+                            <constraint firstItem="Msn-77-MtZ" firstAttribute="top" secondItem="g4x-ov-Fk3" secondAttribute="bottom" constant="9" id="fvg-q8-PAg"/>
+                            <constraint firstItem="KC2-EF-bdL" firstAttribute="top" secondItem="y52-k7-EIq" secondAttribute="bottom" constant="20" id="hBu-ah-Vv1"/>
+                            <constraint firstItem="B5v-Vm-LkZ" firstAttribute="centerX" secondItem="1Hc-gx-Agy" secondAttribute="centerX" id="kJo-F4-p5T"/>
+                            <constraint firstItem="KC2-EF-bdL" firstAttribute="centerX" secondItem="1Hc-gx-Agy" secondAttribute="centerX" id="mXv-vl-6j2"/>
+                            <constraint firstItem="g4x-ov-Fk3" firstAttribute="top" secondItem="B5v-Vm-LkZ" secondAttribute="bottom" constant="32" id="p1o-Fc-sTA"/>
+                            <constraint firstItem="BGW-Te-9I7" firstAttribute="centerX" secondItem="1Hc-gx-Agy" secondAttribute="centerX" id="p7l-zG-Ysm"/>
+                            <constraint firstItem="zae-cU-rc0" firstAttribute="centerX" secondItem="1Hc-gx-Agy" secondAttribute="centerX" id="uu2-ad-Leo"/>
+                            <constraint firstItem="Msn-77-MtZ" firstAttribute="centerX" secondItem="1Hc-gx-Agy" secondAttribute="centerX" id="wXO-1e-Ijx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="KC2-EF-bdL" id="7da-MK-lLV"/>
+                        <outlet property="fullnameTextFileld" destination="M2g-37-Fgu" id="6qx-0y-mva"/>
+                        <outlet property="passTextField" destination="Msn-77-MtZ" id="ULA-4s-GVX"/>
+                        <outlet property="passcfTextFied" destination="y52-k7-EIq" id="Ro6-Tg-l3g"/>
+                        <outlet property="usernameTextField" destination="g4x-ov-Fk3" id="hUU-3X-4T9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m6X-Nx-U6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1442.0289855072465" y="-642.39130434782612"/>
+        </scene>
         <!--Reveal View Controller-->
         <scene sceneID="2JP-tF-3er">
             <objects>
@@ -19,7 +465,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hLs-Qk-a98"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NZE-eq-Zi9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -41,55 +487,72 @@
                         <viewControllerLayoutGuide type="bottom" id="eZv-sa-AWh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="G3a-AG-fDc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="501-I8-eGo">
-                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="501-I8-eGo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.33303125" green="0.33303125" blue="0.33303125" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" id="8nb-lH-Q2c" customClass="menuTableViewCell" customModule="wf_AnimeApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell0" rowHeight="75" id="8nb-lH-Q2c" customClass="menuTableViewCell" customModule="wf_AnimeApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8nb-lH-Q2c" id="Pmv-Lk-ivt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="ggR-xz-4Rf" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="P9H-rD-22z"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" id="lRU-zI-XIb" customClass="menuTableViewCell" customModule="wf_AnimeApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" rowHeight="75" id="saP-Xt-8Ty" customClass="menuTableViewCell" customModule="wf_AnimeApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="103" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lRU-zI-XIb" id="BuA-6Y-7XI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="saP-Xt-8Ty" id="ktK-CZ-Sp7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell3" id="8hh-oy-Bi1" customClass="menuTableViewCell" customModule="wf_AnimeApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" rowHeight="75" id="g4K-0K-quE" customClass="menuTableViewCell" customModule="wf_AnimeApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="178" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8hh-oy-Bi1" id="xio-hs-RKK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g4K-0K-quE" id="Xa2-wO-2aO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell4" id="xjD-uR-ckD" customClass="menuTableViewCell" customModule="wf_AnimeApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="160" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell3" rowHeight="75" id="kub-hk-1oL" customClass="menuTableViewCell" customModule="wf_AnimeApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="253" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xjD-uR-ckD" id="rzS-IC-txL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kub-hk-1oL" id="WhT-K0-ErK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell5" id="OtV-xz-sxe" customClass="menuTableViewCell" customModule="wf_AnimeApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="204" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell4" rowHeight="75" id="Rcv-2G-rPS" customClass="menuTableViewCell" customModule="wf_AnimeApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="328" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OtV-xz-sxe" id="uRm-5J-Gct">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rcv-2G-rPS" id="8Fb-Bs-s0c">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell5" rowHeight="75" id="5gY-dh-y2l" customClass="menuTableViewCell" customModule="wf_AnimeApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="403" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5gY-dh-y2l" id="Iy3-rn-tOK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -101,15 +564,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="501-I8-eGo" secondAttribute="trailing" id="Da2-Z9-5TZ"/>
-                            <constraint firstItem="501-I8-eGo" firstAttribute="top" secondItem="Ood-EB-BpZ" secondAttribute="bottom" constant="38" id="ajC-4c-NUG"/>
+                            <constraint firstItem="501-I8-eGo" firstAttribute="top" secondItem="Ood-EB-BpZ" secondAttribute="bottom" constant="-20" id="ajC-4c-NUG"/>
                             <constraint firstItem="501-I8-eGo" firstAttribute="leading" secondItem="G3a-AG-fDc" secondAttribute="leading" id="sOY-Ku-jm3"/>
                             <constraint firstItem="eZv-sa-AWh" firstAttribute="top" secondItem="501-I8-eGo" secondAttribute="bottom" id="tSa-k2-Gby"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="menuTableView" destination="501-I8-eGo" id="QW3-En-bAL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfP-wA-j9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="704.79999999999995" y="809.14542728635683"/>
+            <point key="canvasLocation" x="704.34782608695662" y="760.59782608695662"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o0R-PJ-Lf6">
@@ -134,15 +600,15 @@
             <objects>
                 <tableViewController id="e5O-AU-XeC" customClass="mainTableViewController" customModule="wf_AnimeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" sectionHeaderHeight="28" sectionFooterHeight="28" id="h5J-iv-b4K">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellMain" rowHeight="132" id="FKe-DX-EK5" customClass="mainTableViewCell" customModule="wf_AnimeApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="132"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="132"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FKe-DX-EK5" id="s9b-87-OX0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FiE-r4-ocQ">
@@ -152,7 +618,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frn-YG-Pm4">
-                                            <rect key="frame" x="140" y="8" width="227" height="55"/>
+                                            <rect key="frame" x="140" y="8" width="266" height="55"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="55" id="u0A-9Q-bhF"/>
                                             </constraints>
@@ -171,7 +637,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjb-Y2-uNn">
-                                            <rect key="frame" x="205" y="71" width="162" height="21"/>
+                                            <rect key="frame" x="205" y="71" width="201" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="7bs-g5-lKn"/>
                                             </constraints>
@@ -180,7 +646,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lượt xem:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfU-0y-5gJ">
-                                            <rect key="frame" x="140" y="92" width="82" height="29.5"/>
+                                            <rect key="frame" x="140" y="92" width="82" height="29"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="82" id="1Ja-Vv-vYm"/>
                                             </constraints>
@@ -189,7 +655,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS8-Xa-FwB">
-                                            <rect key="frame" x="230" y="96" width="137" height="21"/>
+                                            <rect key="frame" x="230" y="96" width="176" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -236,7 +702,15 @@
             <point key="canvasLocation" x="2192.8000000000002" y="52.623688155922046"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg_login" width="80" height="106"/>
+        <image name="icon_email" width="16" height="16"/>
+        <image name="icon_fn" width="16" height="16"/>
+        <image name="icon_home" width="33" height="33"/>
+        <image name="lock-128" width="42" height="42"/>
+        <image name="username-icon" width="42" height="42"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P9H-rD-22z"/>
+        <segue reference="bQt-Rp-saT"/>
     </inferredMetricsTieBreakers>
 </document>

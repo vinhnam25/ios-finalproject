@@ -12,13 +12,19 @@
 		7F0B5EA31EE4579A00D087CD /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5EA21EE4579A00D087CD /* menuTableViewCell.swift */; };
 		7FD899031ED35A6F007C9D94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD899021ED35A6F007C9D94 /* AppDelegate.swift */; };
 		7FD899081ED35A6F007C9D94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD899061ED35A6F007C9D94 /* Main.storyboard */; };
-		7FD8990A1ED35A6F007C9D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD899091ED35A6F007C9D94 /* Assets.xcassets */; };
 		7FD8990D1ED35A6F007C9D94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD8990B1ED35A6F007C9D94 /* LaunchScreen.storyboard */; };
 		7FD899181ED35A6F007C9D94 /* wf_AnimeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD899171ED35A6F007C9D94 /* wf_AnimeAppTests.swift */; };
 		7FD899231ED35A6F007C9D94 /* wf_AnimeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD899221ED35A6F007C9D94 /* wf_AnimeAppUITests.swift */; };
 		7FD8993A1EE3DDA4007C9D94 /* UIImageView+ShowImgFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD899391EE3DDA4007C9D94 /* UIImageView+ShowImgFrom.swift */; };
 		7FE83F8B1EE487E700577BC9 /* mainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE83F8A1EE487E700577BC9 /* mainTableViewController.swift */; };
 		7FE83F8D1EE4891200577BC9 /* mainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE83F8C1EE4891200577BC9 /* mainTableViewCell.swift */; };
+		7FE83F8F1EE5A28F00577BC9 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE83F8E1EE5A28F00577BC9 /* loginViewController.swift */; };
+		7FE83F911EE5E81400577BC9 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE83F901EE5E81400577BC9 /* DesignableTextField.swift */; };
+		7FE83F931EE6D3A600577BC9 /* DesignableLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE83F921EE6D3A600577BC9 /* DesignableLable.swift */; };
+		7FE83F971EE6E5FC00577BC9 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE83F961EE6E5FC00577BC9 /* DesignableButton.swift */; };
+		7FE83F991EE6F79A00577BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FE83F981EE6F79A00577BC9 /* Assets.xcassets */; };
+		7FE83F9B1EE7075400577BC9 /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE83F9A1EE7075400577BC9 /* signupViewController.swift */; };
+		7FE83F9D1EE717A600577BC9 /* UIAlert+ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE83F9C1EE717A600577BC9 /* UIAlert+ShowAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +53,6 @@
 		7FD898FF1ED35A6F007C9D94 /* wf-AnimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wf-AnimeApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD899021ED35A6F007C9D94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FD899071ED35A6F007C9D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7FD899091ED35A6F007C9D94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FD8990C1ED35A6F007C9D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FD8990E1ED35A6F007C9D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FD899131ED35A6F007C9D94 /* wf-AnimeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wf-AnimeAppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +64,13 @@
 		7FD899391EE3DDA4007C9D94 /* UIImageView+ShowImgFrom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+ShowImgFrom.swift"; sourceTree = "<group>"; };
 		7FE83F8A1EE487E700577BC9 /* mainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainTableViewController.swift; sourceTree = "<group>"; };
 		7FE83F8C1EE4891200577BC9 /* mainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainTableViewCell.swift; sourceTree = "<group>"; };
+		7FE83F8E1EE5A28F00577BC9 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		7FE83F901EE5E81400577BC9 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		7FE83F921EE6D3A600577BC9 /* DesignableLable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableLable.swift; sourceTree = "<group>"; };
+		7FE83F961EE6E5FC00577BC9 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		7FE83F981EE6F79A00577BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7FE83F9A1EE7075400577BC9 /* signupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
+		7FE83F9C1EE717A600577BC9 /* UIAlert+ShowAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlert+ShowAlert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +139,8 @@
 				7FD899331EE3DC30007C9D94 /* controller */,
 				7FD899321EE3DC22007C9D94 /* class */,
 				7FD899021ED35A6F007C9D94 /* AppDelegate.swift */,
-				7FD899091ED35A6F007C9D94 /* Assets.xcassets */,
 				7FD8990E1ED35A6F007C9D94 /* Info.plist */,
+				7FE83F981EE6F79A00577BC9 /* Assets.xcassets */,
 			);
 			path = "wf-AnimeApp";
 			sourceTree = "<group>";
@@ -154,6 +166,9 @@
 		7FD899321EE3DC22007C9D94 /* class */ = {
 			isa = PBXGroup;
 			children = (
+				7FE83F901EE5E81400577BC9 /* DesignableTextField.swift */,
+				7FE83F921EE6D3A600577BC9 /* DesignableLable.swift */,
+				7FE83F961EE6E5FC00577BC9 /* DesignableButton.swift */,
 			);
 			name = class;
 			sourceTree = "<group>";
@@ -163,6 +178,8 @@
 			children = (
 				7F0B5EA01EE456B600D087CD /* menuViewController.swift */,
 				7FE83F8A1EE487E700577BC9 /* mainTableViewController.swift */,
+				7FE83F8E1EE5A28F00577BC9 /* loginViewController.swift */,
+				7FE83F9A1EE7075400577BC9 /* signupViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -186,6 +203,7 @@
 		7FD899371EE3DC89007C9D94 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				7FE83F9C1EE717A600577BC9 /* UIAlert+ShowAlert.swift */,
 				7FD899391EE3DDA4007C9D94 /* UIImageView+ShowImgFrom.swift */,
 			);
 			name = extension;
@@ -309,7 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FD8990D1ED35A6F007C9D94 /* LaunchScreen.storyboard in Resources */,
-				7FD8990A1ED35A6F007C9D94 /* Assets.xcassets in Resources */,
+				7FE83F991EE6F79A00577BC9 /* Assets.xcassets in Resources */,
 				7FD899081ED35A6F007C9D94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,12 +354,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FD8993A1EE3DDA4007C9D94 /* UIImageView+ShowImgFrom.swift in Sources */,
+				7FE83F911EE5E81400577BC9 /* DesignableTextField.swift in Sources */,
+				7FE83F931EE6D3A600577BC9 /* DesignableLable.swift in Sources */,
 				7FE83F8D1EE4891200577BC9 /* mainTableViewCell.swift in Sources */,
 				7FD899031ED35A6F007C9D94 /* AppDelegate.swift in Sources */,
 				7FE83F8B1EE487E700577BC9 /* mainTableViewController.swift in Sources */,
+				7FE83F8F1EE5A28F00577BC9 /* loginViewController.swift in Sources */,
 				7F0B5E9B1EE446C500D087CD /* SWRevealViewController.m in Sources */,
+				7FE83F9D1EE717A600577BC9 /* UIAlert+ShowAlert.swift in Sources */,
 				7F0B5EA31EE4579A00D087CD /* menuTableViewCell.swift in Sources */,
 				7F0B5EA11EE456B600D087CD /* menuViewController.swift in Sources */,
+				7FE83F9B1EE7075400577BC9 /* signupViewController.swift in Sources */,
+				7FE83F971EE6E5FC00577BC9 /* DesignableButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

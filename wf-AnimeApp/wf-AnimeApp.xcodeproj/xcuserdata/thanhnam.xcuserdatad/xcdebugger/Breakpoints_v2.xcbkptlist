@@ -42,12 +42,106 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wf-AnimeApp/mainTableViewController.swift"
-            timestampString = "518301425.676612"
+            timestampString = "518458206.429181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "tableView(_:viewForHeaderInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "wf-AnimeApp/menuViewController.swift"
+            timestampString = "518452281.803533"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "menuDictIcon"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "wf_AnimeApp.menuViewController.menuTableView.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITableView&gt;"
+                  moduleName = "wf-AnimeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Project/wf-AnimeApp/wf-AnimeApp/menuViewController.swift"
+                  timestampString = "518452283.102128"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "wf_AnimeApp.menuViewController.menuTableView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITableView&gt;"
+                  moduleName = "wf-AnimeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Project/wf-AnimeApp/wf-AnimeApp/menuViewController.swift"
+                  timestampString = "518452283.108779"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "wf_AnimeApp.menuViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; wf_AnimeApp.menuViewController"
+                  moduleName = "wf-AnimeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Project/wf-AnimeApp/wf-AnimeApp/menuViewController.swift"
+                  timestampString = "518452283.115643"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "846">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "wf_AnimeApp.menuViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;wf_AnimeApp.menuViewController&gt;"
+                  moduleName = "wf-AnimeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Project/wf-AnimeApp/wf-AnimeApp/menuViewController.swift"
+                  timestampString = "518452283.119826"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "738">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "wf-AnimeApp/signupViewController.swift"
+            timestampString = "518464356.536613"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "f_ValidateAll()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -10,7 +10,8 @@ import UIKit
 
 class menuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var menuDict = [
+    var menuDictText = [
+        "cell0" : "",
         "cell1" : "Trang chủ",
         "cell2" : "Xem danh sách phim",
         "cell3" : "Lọc phim",
@@ -18,10 +19,21 @@ class menuViewController: UIViewController, UITableViewDelegate, UITableViewData
         "cell5" : "Bảng xếp hạng"
     ]
     
+    var menuDictIcon = [
+        "cell1" : #imageLiteral(resourceName: "icon_home"),
+        "cell2" : #imageLiteral(resourceName: "icon_list"),
+        "cell3" : #imageLiteral(resourceName: "icon_search"),
+        "cell4" : #imageLiteral(resourceName: "icon_cenlar"),
+        "cell5" : #imageLiteral(resourceName: "icon_rank")
+    ]
+    
+    @IBOutlet weak var menuTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        menuTableView.tableFooterView = UIView(frame: .zero)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,14 +46,19 @@ class menuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuDict.count
+        return menuDictText.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let key = Array(menuDict.keys).sorted{$0.0 < $0.1}[indexPath.row]
+        let key = Array(menuDictText.keys).sorted{$0.0 < $0.1}[indexPath.row]
         let cellContent = tableView.dequeueReusableCell(withIdentifier: key, for: indexPath)
-        cellContent.textLabel?.text = menuDict[key]
+        
+        cellContent.textLabel?.text = menuDictText[key]
+        cellContent.textLabel?.textColor = UIColor.white
+        
+        cellContent.imageView?.image = menuDictIcon[key]
+        cellContent.imageView?.tintColor = UIColor.white
         
         return cellContent
     }

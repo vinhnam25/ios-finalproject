@@ -10,15 +10,16 @@ import UIKit
 
 class mainTableViewController: UITableViewController {
 
-    var list1 = [[String: AnyObject]]()
-    var list2 = [[String: AnyObject]]()
+    var list1 : [[String: AnyObject]] = [["Ten": "" as AnyObject, "SoLuotXem" : 0 as AnyObject, "SoTap": 0 as AnyObject, "Hinh1": "" as AnyObject, "SoTapHienCo": 0 as AnyObject]]
+    var list2 : [[String: AnyObject]] = [["Ten": "" as AnyObject, "SoLuotXem" : 0 as AnyObject, "SoTap": 0 as AnyObject, "Hinh1": "" as AnyObject, "SoTapHienCo": 0 as AnyObject]]
     
-    let titles = ["Phim mới cập nhật", "Phim mới ra mắt"]
-    var sectionData: [Int:[[String: AnyObject]]] = [:]//[0: list1, 1: list2]
+    let titles = [ "Phim mới cập nhật", "Phim mới ra mắt"]
+    var sectionData: [Int: [[String: AnyObject]]] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        sectionData = [0: self.list1, 1: self.list2]
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         // Do any additional setup after loading the view.
@@ -50,7 +51,10 @@ class mainTableViewController: UITableViewController {
     
     func f_Login()
     {
-        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "vcLogin") as! loginViewController
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true, completion: nil)
     }
     
     func CallService1() {
@@ -65,10 +69,13 @@ class mainTableViewController: UITableViewController {
             }
             else {
                 do {
-                    self.list1 = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String: AnyObject]]
+                    self.sectionData[0] = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [[String: AnyObject]]
                     
                     OperationQueue.main.addOperation {
-                        self.f_Finish(index: 0, list: self.list1)
+                        //self.f_Finish(index: 0, list: self.list1)
+                        
+                        self.tableView.reloadData()
+                        self.f_FinishService(index: 1)
                     }
                     
                 }
@@ -94,10 +101,12 @@ class mainTableViewController: UITableViewController {
             }
             else {
                 do {
-                    self.list2 = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String: AnyObject]]
+                    self.sectionData[1] = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [[String: AnyObject]]
                     
                     OperationQueue.main.addOperation {
-                        self.f_Finish(index: 1, list: self.list2)
+
+                        self.tableView.reloadData()
+                        self.f_FinishService(index: 2)
                     }
                     
                 }
@@ -110,11 +119,11 @@ class mainTableViewController: UITableViewController {
         tk.resume()
         
     }
-
-    func f_Finish(index: Int, list: [[String: AnyObject]])
+    
+    func f_FinishService(index: Int)
     {
-        sectionData[index] = list
-        self.tableView.reloadData()
+        print("---------------\n")
+        print(index)
     }
     
     override func didReceiveMemoryWarning() {
@@ -169,9 +178,12 @@ class mainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let view = UIView(frame: CGRect(x:0, y:0, width: tableView.frame.size.width, height: 18))
-        let label = UILabel(frame: CGRect(x:10, y:9, width:tableView.frame.size.width, height:18))
+        let image = UIImageView(image: #imageLiteral(resourceName: "icon_menu"))
+        image.frame = CGRect(x:5, y:5, width: 35, height:35)
+        let label = UILabel(frame: CGRect(x:45, y:15, width:tableView.frame.size.width, height:18))
         label.font = UIFont.systemFont(ofSize: 20)
         label.text = titles[section]
+        view.addSubview(image)
         view.addSubview(label)
         view.backgroundColor = UIColor.gray // Set your background color
         
@@ -181,6 +193,7 @@ class mainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 45
     }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
