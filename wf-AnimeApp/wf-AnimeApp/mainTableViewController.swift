@@ -24,18 +24,12 @@ class mainTableViewController: UITableViewController {
         
         // Do any additional setup after loading the view.
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(
-            title: "Danh mục",
+            image: #imageLiteral(resourceName: "icon_menu_50"),
             style: .plain,
             target: self.revealViewController(),
             action: #selector(SWRevealViewController.revealToggle(_:))
         )
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "Đăng nhập",
-            style: .plain,
-            target: self,
-            action: #selector(f_Login)
-        )
         
         self.navigationItem.title = "AnimeFun"
         
@@ -49,12 +43,44 @@ class mainTableViewController: UITableViewController {
         CallService2()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let isLogin = UserDefaults.standard.bool(forKey: "isLogin")
+        
+        if isLogin {
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+                title: "Tủ phim",
+                style: .plain,
+                target: self,
+                action: #selector(f_GoToWhsFilm)
+            )
+        }
+        else {
+
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+                image: #imageLiteral(resourceName: "icon_lock_50"),
+                style: .plain,
+                target: self,
+                action: #selector(f_Login)
+            )
+        }
+        
+    }
+    
     func f_Login()
     {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "vcLogin") as! loginViewController
         vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    func f_GoToWhsFilm()
+    {
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = sb.instantiateViewController(withIdentifier: "vcWhs") as! logoutViewController
+//        vc.modalTransitionStyle = .crossDissolve
+//        self.present(vc, animated: true, completion: nil)
     }
     
     func CallService1() {
@@ -122,7 +148,6 @@ class mainTableViewController: UITableViewController {
     
     func f_FinishService(index: Int)
     {
-        print("---------------\n")
         print(index)
     }
     
@@ -164,13 +189,13 @@ class mainTableViewController: UITableViewController {
         cell.SoTapLable.text = "\(sotaphienco)/\(sotap)"
         cell.LuotXemLabel.text = numberFormatter.string(from: luotxem)
         
-        if indexPath.row % 2 == 0 {
-            cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        }
-        else
-        {
-            cell.backgroundColor = #colorLiteral(red: 0.8505099416, green: 0.8505299091, blue: 0.8505191207, alpha: 1)
-        }
+//        if indexPath.row % 2 == 0 {
+//            cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+//        }
+//        else
+//        {
+//            cell.backgroundColor = #colorLiteral(red: 0.8505099416, green: 0.8505299091, blue: 0.8505191207, alpha: 1)
+//        }
         
         return cell
     }
@@ -194,6 +219,22 @@ class mainTableViewController: UITableViewController {
         return 45
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "vcDetail") as! detailTableViewController
+        
+        var id: String = "0"
+        let list = sectionData[indexPath.section]!
+        
+        id = String(list[indexPath.row]["ID"] as! Int)
+        
+        vc.CallService_LoadData(id: id)
+        
+        let navigationView = UINavigationController.init(rootViewController: vc)
+        self.revealViewController().pushFrontViewController(navigationView, animated: true)
+        //self.revealViewController().navigationController?.pushViewController(navigationView, animated: true)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -11,7 +11,6 @@ import UIKit
 class menuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var menuDictText = [
-        "cell0" : "",
         "cell1" : "Trang chủ",
         "cell2" : "Xem danh sách phim",
         "cell3" : "Lọc phim",
@@ -28,14 +27,58 @@ class menuViewController: UIViewController, UITableViewDelegate, UITableViewData
     ]
     
     @IBOutlet weak var menuTableView: UITableView!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         menuTableView.tableFooterView = UIView(frame: .zero)
+        
+        avatarImageView.layer.borderColor = UIColor.white.cgColor
+        avatarImageView.layer.borderWidth = 2
+        avatarImageView.layer.cornerRadius = 20
+        avatarImageView.layer.masksToBounds = false
+        avatarImageView.clipsToBounds = true
+        
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let isLogin = UserDefaults.standard.bool(forKey: "isLogin")
+        
+        if isLogin {
+            let dict = UserDefaults.standard.value(forKey: "dict") as! [String: AnyObject]
+            nameLabel.text! = dict["HoTen"] as! String
+            
+            menuDictText["cell6"] = "Đăng xuât"
+            menuDictIcon["cell6"] = #imageLiteral(resourceName: "icon_logout")
+            
+            if dict["TenDN"] as! String == "admin" {
+                menuDictText["cell7"] = "Quản trị"
+                menuDictIcon["cell7"] = #imageLiteral(resourceName: "icon_admin")
+            }
+            else
+            {
+                menuDictText["cell7"] = ""
+                menuDictIcon.removeValue(forKey: "cell7")
+            }
+            
+        }
+        else {
+            nameLabel.text! = "Khách"
+            menuDictText["cell6"] = ""
+            menuDictText["cell7"] = ""
+            
+            menuDictText.removeValue(forKey: "cell6")
+            menuDictIcon.removeValue(forKey: "cell7")
+        }
+        
+        menuTableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

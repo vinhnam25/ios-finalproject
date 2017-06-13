@@ -13,6 +13,9 @@ protocol AlertDelegate : class
 {
     func f_Handel_YES()
     func f_Handel_NO()
+}
+
+protocol AlertOKDelegate: class {
     func f_Handel_OK()
 }
 
@@ -39,7 +42,7 @@ extension UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    func f_ShowAlert_OK(title: String, mess: String, delegate: AlertDelegate?)
+    func f_ShowAlert_OK(title: String, mess: String, delegate: AlertOKDelegate?)
     {
         let alertController = UIAlertController(title: title, message: mess, preferredStyle: .alert)
         let alertActionYES = UIAlertAction(title: "OK", style: .default, handler: {

@@ -39,4 +39,19 @@ class DesignableLable: UILabel {
             self.layer.addSublayer(border)
         }
     }
+    
+    @IBInspectable var iconLabel : UIImage? {
+        didSet {
+            let attachment = NSTextAttachment()
+            attachment.image = iconLabel
+            attachment.bounds = CGRect(x: -3, y: -3, width: 20, height: 20)
+            let attachmentStr = NSAttributedString(attachment: attachment)
+            let myString = NSMutableAttributedString(string: "")
+            myString.append(attachmentStr)
+            let myString1 = NSMutableAttributedString(string: self.text!)
+            myString.append(myString1)
+            self.attributedText = myString
+            
+        }
+    }
 }

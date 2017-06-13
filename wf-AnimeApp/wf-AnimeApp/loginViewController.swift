@@ -8,7 +8,7 @@
 
 import UIKit
 
-class loginViewController: UIViewController {
+class loginViewController: UIViewController, AlertOKDelegate {
     
     @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var loginBar: UINavigationBar!
@@ -74,7 +74,19 @@ class loginViewController: UIViewController {
                                 self.f_ShowAlert_OK(title: "Thông báo", mess: "Đăng nhập thất bại !")
                             }
                             else{
-                                self.f_ShowAlert_OK(title: "Thông báo", mess: "Đăng nhập thành công.")
+                                let matk = self.result["MaTK"] as! Int
+                                
+                                if matk > 0 {
+                                    
+                                    UserDefaults.standard.set(self.result, forKey: "dict")
+                                    UserDefaults.standard.set(true, forKey: "isLogin")
+                                    
+                                    self.f_ShowAlert_OK(title: "Thông báo", mess: "Đăng nhập thành công.", delegate: self)
+                                }
+                                else
+                                {
+                                    self.f_ShowAlert_OK(title: "Thông báo", mess: "Sai tên đăng nhập hoặc mật khẩu !")
+                                }
                                 print(self.result)
                             }
                             
@@ -107,6 +119,10 @@ class loginViewController: UIViewController {
         }
         
         return true
+    }
+    
+    func f_Handel_OK() {
+        dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation
