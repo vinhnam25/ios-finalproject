@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D53AB1F1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53AB1E1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift */; };
 		7F0B5E9B1EE446C500D087CD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5E9A1EE446C500D087CD /* SWRevealViewController.m */; };
 		7F0B5EA11EE456B600D087CD /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5EA01EE456B600D087CD /* menuViewController.swift */; };
 		7F0B5EA31EE4579A00D087CD /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5EA21EE4579A00D087CD /* menuTableViewCell.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D53AB1E1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quanLyPhimTableViewController.swift; sourceTree = "<group>"; };
 		7F0B5E981EE446C400D087CD /* wf-AnimeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wf-AnimeApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		7F0B5E991EE446C500D087CD /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		7F0B5E9A1EE446C500D087CD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				7F5B86FA1EEC7313004557B8 /* eploiseViewController.swift */,
 				7F5B86FE1EF0183E004557B8 /* fansubViewController.swift */,
 				7F5B87051EF06F5A004557B8 /* customViewController.swift */,
+				3D53AB1E1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				7FE83FA31EE9008300577BC9 /* detailTableViewController.swift in Sources */,
 				7F5B86FB1EEC7313004557B8 /* eploiseViewController.swift in Sources */,
 				7F5B87061EF06F5A004557B8 /* customViewController.swift in Sources */,
+				3D53AB1F1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift in Sources */,
 				7FE83F9D1EE717A600577BC9 /* UIAlert+ShowAlert.swift in Sources */,
 				7F0B5EA31EE4579A00D087CD /* menuTableViewCell.swift in Sources */,
 				7F0B5EA11EE456B600D087CD /* menuViewController.swift in Sources */,

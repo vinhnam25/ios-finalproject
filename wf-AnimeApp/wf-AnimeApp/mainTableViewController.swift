@@ -20,16 +20,10 @@ class mainTableViewController: UITableViewController {
         super.viewDidLoad()
 
         sectionData = [0: self.list1, 1: self.list2]
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        //self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         // Do any additional setup after loading the view.
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: #imageLiteral(resourceName: "icon_menu_50"),
-            style: .plain,
-            target: self.revealViewController(),
-            action: #selector(SWRevealViewController.revealToggle(_:))
-        )
-        
+       
         
         self.navigationItem.title = "AnimeFun"
         
