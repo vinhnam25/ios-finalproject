@@ -1,14 +1,14 @@
 Phan he User:
 -------------------------------------
-1 Dang nhap (api/TaiKhoan/Login)
+1 Dang nhap (api/TaiKhoan/Login) - xong
 
-2 Dang ky (api/TaiKhoan/Register)
+2 Dang ky (api/TaiKhoan/Register) - xong
 
-3 Xem danh sach phim theo the loai, nhom dich, nha san xuat, nam phat hanh  ( api/Phim/DSTheoLoai/{id} )
+3 Xem danh sach phim theo the loai, nhom dich, nha san xuat, nam phat hanh  ( api/Phim/DSTheoLoai/{id} ) -xong
 
-4 Tim kiem phim theo nhieu tieu chi
+4 Tim kiem phim theo nhieu tieu chi 
 
-5 Chon 1 bo phim, sau do chon tap phim de xem
+5 Chon 1 bo phim, sau do chon tap phim de xem -xong
 
 6 Neu user da dang nhap app thi cho phep vao kho phim cua minh tai man hinh xem phim hoac man hinh hien thi danh sach
 
@@ -18,7 +18,7 @@ Phan he User:
 
 9 Gop y
 
-10 Xem thong tin chi tiet phim
+10 Xem thong tin chi tiet phim -xong
 
 11 Xem lich chieu phim
 
