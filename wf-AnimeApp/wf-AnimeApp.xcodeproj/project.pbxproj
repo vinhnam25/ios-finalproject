@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3D53AB1F1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53AB1E1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift */; };
+		3D53AB211EF1CC4100BE6ACF /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53AB201EF1CC4100BE6ACF /* File.swift */; };
+		3D53AB231EF1CC5500BE6ACF /* Phim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53AB221EF1CC5500BE6ACF /* Phim.swift */; };
 		7F0B5E9B1EE446C500D087CD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5E9A1EE446C500D087CD /* SWRevealViewController.m */; };
 		7F0B5EA11EE456B600D087CD /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5EA01EE456B600D087CD /* menuViewController.swift */; };
 		7F0B5EA31EE4579A00D087CD /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5EA21EE4579A00D087CD /* menuTableViewCell.swift */; };
@@ -56,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		3D53AB1E1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quanLyPhimTableViewController.swift; sourceTree = "<group>"; };
+		3D53AB201EF1CC4100BE6ACF /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		3D53AB221EF1CC5500BE6ACF /* Phim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phim.swift; sourceTree = "<group>"; };
 		7F0B5E981EE446C400D087CD /* wf-AnimeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wf-AnimeApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		7F0B5E991EE446C500D087CD /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		7F0B5E9A1EE446C500D087CD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				7FE83F921EE6D3A600577BC9 /* DesignableLable.swift */,
 				7FE83F961EE6E5FC00577BC9 /* DesignableButton.swift */,
 				7F5B86F81EEC5BF4004557B8 /* DesignableImageView.swift */,
+				3D53AB201EF1CC4100BE6ACF /* File.swift */,
+				3D53AB221EF1CC5500BE6ACF /* Phim.swift */,
 			);
 			name = class;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 				7FE83F931EE6D3A600577BC9 /* DesignableLable.swift in Sources */,
 				7FE83F8D1EE4891200577BC9 /* mainTableViewCell.swift in Sources */,
 				7F5B86FD1EEC75A3004557B8 /* eploiseTableViewCell.swift in Sources */,
+				3D53AB211EF1CC4100BE6ACF /* File.swift in Sources */,
 				7F5B87011EF01E5C004557B8 /* fansubTableViewCell.swift in Sources */,
 				7FD899031ED35A6F007C9D94 /* AppDelegate.swift in Sources */,
 				7FE83F8B1EE487E700577BC9 /* mainTableViewController.swift in Sources */,
@@ -410,6 +417,7 @@
 				3D53AB1F1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift in Sources */,
 				7FE83F9D1EE717A600577BC9 /* UIAlert+ShowAlert.swift in Sources */,
 				7F0B5EA31EE4579A00D087CD /* menuTableViewCell.swift in Sources */,
+				3D53AB231EF1CC5500BE6ACF /* Phim.swift in Sources */,
 				7F0B5EA11EE456B600D087CD /* menuViewController.swift in Sources */,
 				7F5B86FF1EF0183E004557B8 /* fansubViewController.swift in Sources */,
 				7FE83F9B1EE7075400577BC9 /* signupViewController.swift in Sources */,

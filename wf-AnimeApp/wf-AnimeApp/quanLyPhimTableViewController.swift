@@ -9,9 +9,6 @@
 import UIKit
 
 class quanlyPhimTableViewController: UITableViewController {
-    @IBOutlet var tfURLImage: UITextField!
-    @IBOutlet var previewImage: UIImageView!
-    
     var list1 : [[String: AnyObject]] = [["Ten": "" as AnyObject, "SoLuotXem" : 0 as AnyObject, "SoTap": 0 as AnyObject, "Hinh1": "" as AnyObject, "SoTapHienCo": 0 as AnyObject]]
     
     let titles = [ "Danh sách phim"]
@@ -37,14 +34,6 @@ class quanlyPhimTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-    }
-    
-    func f_ThemPhim()
-    {
-        //        let sb = UIStoryboard(name: "Main", bundle: nil)
-        //        let vc = sb.instantiateViewController(withIdentifier: "vcWhs") as! logoutViewController
-        //        vc.modalTransitionStyle = .crossDissolve
-        //        self.present(vc, animated: true, completion: nil)
     }
     
     func f_GetAllPhim() {
@@ -157,76 +146,23 @@ class quanlyPhimTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "vcDetail") as! detailTableViewController
-        
+        let vc = sb.instantiateViewController(withIdentifier: "editPhim") as! themPhimTableViewController
+        vc.isEdit = true
         var id: String = "0"
         let list = sectionData[indexPath.section]!
-        
         id = String(list[indexPath.row]["ID"] as! Int)
-        
-        vc.CallService_LoadData(id: id)
-        
-        //let navigationView = UINavigationController.init(rootViewController: vc)
-        //self.revealViewController().pushFrontViewController(navigationView, animated: true)
-        //self.revealViewController().navigationController?.pushViewController(navigationView, animated: true)
+        vc.getPhim(id:id)
+        self.show(vc, sender: nil)
     }
     
     @IBAction func unwindToQuanLyPhim(segue:UIStoryboardSegue) {
         
     }
-    
-
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 
 class themPhimTableViewController: UITableViewController {
-    @IBOutlet var urlImage: UITextField!
     @IBOutlet var previewImage: UIImageView!
+    @IBOutlet var smallImage: UITextField!
     @IBOutlet var bigImage: UITextField!
     @IBOutlet var tenPhim: UITextField!
     @IBOutlet var soTap: UITextField!
@@ -238,21 +174,22 @@ class themPhimTableViewController: UITableViewController {
     @IBOutlet var loai: UITextField!
     @IBOutlet var tinhTrang: UITextField!
     @IBOutlet var ngayPhatHanh: UITextField!
+    @IBOutlet var fansub: UITextField!
     
     var result : String = "0"
+    var isEdit : Bool = false
+    var phim : Phim!
+    var item = [String : AnyObject]()
     
     @IBAction func textFieldEditingDidEnd(sender: AnyObject) {
         print("editing...")
-        loadImageFromUrl(url: urlImage.text!, view: previewImage)
+        loadImageFromUrl(url: smallImage.text!, view: previewImage)
     }
     
     func loadImageFromUrl(url: String, view: UIImageView){
         
-        // Create Url from string
         let url = NSURL(string: url)!
         
-        // Download task:
-        // - sharedSession = global NSURLCache, NSHTTPCookieStorage and NSURLCredentialStorage objects.
         let task = URLSession.shared.dataTask(with: url as URL) { (responseData, responseUrl, error) -> Void in
             // if responseData is not null...
             if let data = responseData{
@@ -263,19 +200,81 @@ class themPhimTableViewController: UITableViewController {
                 })
             }
         }
-        
         // Run task
         task.resume()
     }
     
     @IBAction func save(sender: AnyObject) {
         luuPhim()
-        
         dismiss(animated: true, completion: nil)
     }
     
+    func getPhim(id :String) {
+        print("sửa phim " + id)
+        title = "Cập nhật phim"
+        
+        let url: String = "http://ioswservice.somee.com/api/phim/chitiet/\(id)"
+        
+        let urlRequest = URLRequest(url: URL(string: url)!)
+        
+        let tk = URLSession.shared.dataTask(with: urlRequest) {
+            (data, response, error) in
+            if error != nil {
+                print("1: \(error.debugDescription)")
+            }
+            else {
+                do {
+                    self.item = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String : AnyObject]
+                    
+                    OperationQueue.main.addOperation {
+                        self.tableView.reloadData()
+                        self.f_FillData(item: self.item)
+                    }
+                    
+                }
+                catch let err as NSError {
+                    print("2: \(err)")
+                }
+            }
+        }
+        
+        tk.resume()
+    }
+    
+    func f_FillData(item : [String : AnyObject])
+    {
+        smallImage.text = item["Hinh1"] as? String
+        bigImage.text = item["Hinh2"] as? String
+        tenPhim.text = item["Ten"] as? String
+        loai.text = item["TheLoai"] as? String //"Hành động, Hài hước"
+        nsx.text = item["NSX"] as? String //"Mad House"
+        fansub.text = item["Fansub"] as? String //"FireGodPhoenix"
+        moTaPhim.text = item["MoTaPhim"] as? String
+        tinhTrang.text = item["TinhTrang"] as? String
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.usesGroupingSeparator = true
+        numberFormatter.groupingSeparator = ","
+        numberFormatter.groupingSize = 3
+        
+        let sotap = item["SoTap"] is NSNull || item["SoTap"] as! Int == 0 ? "??" : String(item["SoTap"] as! Int)
+        let sotaphienco = String(item["SoTapHienCo"] as! Int)
+        //let luotxem = item["SoLuotXem"] as! NSNumber
+        //let yeuthich = item["SoLuotThich"] as! Int
+        
+        //var lx: String = ""
+        //lx = numberFormatter.string(from: luotxem)!
+        
+        soTap.text = sotaphienco
+        soTapHienCo.text = "\(sotap) tập"
+        //luotxemLabel.text = "\(lx) lượt"
+        //favoLabel.text = String(yeuthich)
+        thoiLuong.text = "\(item["ThoiLuong"] as! Int) phút"
+        namPhatHanh.text = String(item["NamPhatHanh"] as! Int)
+    }
+    
     func luuPhim(){
-        if(true)
+        if(!isEdit)
         {
             let url: String = "http://ioswservice.somee.com/api/Phim/Them"
             
@@ -284,7 +283,7 @@ class themPhimTableViewController: UITableViewController {
             
             let currentdate = Date()
             
-            let postString = "ten=\(tenPhim.text!)&NhaSX=\(nsx.text!)&SoTap=\(soTap.text!)&SoTapHienCo=\(soTapHienCo.text!)&ThoiLuong=\(thoiLuong.text!)&NamPhatHanh=\(namPhatHanh.text!)&TinhTrangPhim=\(tinhTrang.text)&MoTaPhim=\(moTaPhim.text!)&LoaiPhim=\(loai.text!)&Hinh1=\(urlImage.text!)&Hinh2=\(bigImage.text!)&SoLuotXem=nil&SoLuoThich=nil&XepHang=nil&DiemDanhGia=nil&UpdateDate=\(currentdate)"
+            let postString = "ten=\(tenPhim.text!)&NhaSX=\(nsx.text!)&SoTap=\(soTap.text!)&SoTapHienCo=\(soTapHienCo.text!)&ThoiLuong=\(thoiLuong.text!)&NamPhatHanh=\(namPhatHanh.text!)&TinhTrangPhim=\(tinhTrang.text)&MoTaPhim=\(moTaPhim.text!)&LoaiPhim=\(loai.text!)&Hinh1=\(smallImage.text!)&Hinh2=\(bigImage.text!)&SoLuotXem=nil&SoLuoThich=nil&XepHang=nil&DiemDanhGia=nil&UpdateDate=\(currentdate)"
             
             urlRequest.httpBody = postString.data(using: .utf8)
             
@@ -306,6 +305,50 @@ class themPhimTableViewController: UITableViewController {
                             }
                             else{
                                 self.f_ShowAlert_OK(title: "Thông báo", mess: "Không thêm được phim!")
+                            }
+                            
+                        }
+                        
+                    }
+                    catch let err as NSError {
+                        print(err)
+                        self.f_ShowAlert_OK(title: "Lỗi", mess: "Lỗi xử lý hoặc kết nối máy chủ !")
+                    }
+                }
+            }
+            
+            tk.resume()
+        }
+        else {
+            let url: String = "http://ioswservice.somee.com/api/Phim/CapNhat"
+            
+            var urlRequest = URLRequest(url: URL(string: url)!)
+            urlRequest.httpMethod = "POST"
+            
+            let currentdate = Date()
+            
+            let postString = "ten=\(tenPhim.text!)&NhaSX=\(nsx.text!)&SoTap=\(soTap.text!)&SoTapHienCo=\(soTapHienCo.text!)&ThoiLuong=\(thoiLuong.text!)&NamPhatHanh=\(namPhatHanh.text!)&TinhTrangPhim=\(tinhTrang.text)&MoTaPhim=\(moTaPhim.text!)&LoaiPhim=\(loai.text!)&Hinh1=\(smallImage.text!)&Hinh2=\(bigImage.text!)&SoLuotXem=nil&SoLuoThich=nil&XepHang=nil&DiemDanhGia=nil&UpdateDate=\(currentdate)"
+            
+            urlRequest.httpBody = postString.data(using: .utf8)
+            
+            let tk = URLSession.shared.dataTask(with: urlRequest)
+            {
+                (data, response, error) in
+                if error != nil {
+                    print(error.debugDescription)
+                }
+                else {
+                    
+                    do {
+                        self.result = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! String
+                        
+                        OperationQueue.main.addOperation {
+                            if self.result == "1"
+                            {
+                                self.f_ShowAlert_OK(title: "Thông báo", mess: "Cập nhật phim thành công.")
+                            }
+                            else{
+                                self.f_ShowAlert_OK(title: "Thông báo", mess: "Không cập nhật được phim!")
                             }
                             
                         }

@@ -1516,7 +1516,7 @@
         <!--Thêm phim-->
         <scene sceneID="Gxi-Gd-EFF">
             <objects>
-                <tableViewController id="zlk-GL-UrU" customClass="themPhimTableViewController" customModule="wf_AnimeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="editPhim" id="zlk-GL-UrU" customClass="themPhimTableViewController" customModule="wf_AnimeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4tE-de-3bW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1552,8 +1552,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Thumbnail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XFd-N8-0ZX">
-                                                    <rect key="frame" x="10" y="33" width="339" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ảnh nhỏ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XFd-N8-0ZX">
+                                                    <rect key="frame" x="10" y="33" width="396" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1597,18 +1597,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số tập" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dbf-jw-n8J">
-                                                    <rect key="frame" x="8" y="8" width="196" height="30"/>
+                                                    <rect key="frame" x="8" y="8" width="80" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số tập hiện có" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9WR-uW-6TF">
-                                                    <rect key="frame" x="212" y="5" width="194" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Thời lượng (phút)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="npw-su-MWN">
+                                                    <rect key="frame" x="279" y="6" width="127" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số tập hiện có" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O8z-sn-Akf">
+                                                    <rect key="frame" x="96" y="8" width="117" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1644,15 +1651,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Thời lượng (phút)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="npw-su-MWN">
-                                                    <rect key="frame" x="8" y="6" width="198" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fansub" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e07-Nv-sph">
+                                                    <rect key="frame" x="8" y="6" width="194" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tình trạng phim" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLn-zL-UIa">
-                                                    <rect key="frame" x="214" y="6" width="182" height="30"/>
+                                                    <rect key="frame" x="210" y="6" width="182" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1669,11 +1676,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Năm phát hành" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DzD-Qd-TQA">
-                                                    <rect key="frame" x="8" y="5" width="192" height="30"/>
+                                                    <rect key="frame" x="214" y="5" width="192" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ngày phát hành" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nab-v8-qwV">
+                                                    <rect key="frame" x="8" y="6" width="200" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1684,15 +1698,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wZp-yF-7bg" id="8aB-Wi-ok1">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ngày phát hành" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nab-v8-qwV">
-                                                    <rect key="frame" x="8" y="6" width="398" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="v5e-ce-hVu">
@@ -1710,14 +1715,6 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Nut-wX-BXc">
-                                        <rect key="frame" x="0.0" y="658" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nut-wX-BXc" id="Rbg-8W-4Bg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -1742,18 +1739,19 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bigImage" destination="3NL-Cu-eoa" id="VOA-cp-SB8"/>
+                        <outlet property="fansub" destination="e07-Nv-sph" id="Kek-wR-vb8"/>
                         <outlet property="loai" destination="R7U-vG-olT" id="nPu-dh-bfQ"/>
-                        <outlet property="moTaPhim" destination="tsW-XO-I05" id="QuQ-lb-gFv"/>
+                        <outlet property="moTaPhim" destination="tsW-XO-I05" id="Eze-c4-cme"/>
                         <outlet property="namPhatHanh" destination="DzD-Qd-TQA" id="7vS-o3-daA"/>
                         <outlet property="ngayPhatHanh" destination="nab-v8-qwV" id="jYs-Ms-550"/>
                         <outlet property="nsx" destination="8fl-dM-2Rc" id="kKs-N9-ZRC"/>
-                        <outlet property="previewImage" destination="1rj-AY-xtX" id="Q3q-Tr-kWH"/>
+                        <outlet property="previewImage" destination="1rj-AY-xtX" id="F8n-zi-y1t"/>
+                        <outlet property="smallImage" destination="XFd-N8-0ZX" id="6pm-Uv-lKw"/>
                         <outlet property="soTap" destination="Dbf-jw-n8J" id="uS4-Br-AkT"/>
-                        <outlet property="soTapHienCo" destination="9WR-uW-6TF" id="nco-Xe-Cgn"/>
-                        <outlet property="tenPhim" destination="9WR-uW-6TF" id="O6M-60-7nh"/>
+                        <outlet property="soTapHienCo" destination="O8z-sn-Akf" id="FGy-to-5x3"/>
+                        <outlet property="tenPhim" destination="Fvs-SE-hW9" id="87p-Zn-gHy"/>
                         <outlet property="thoiLuong" destination="npw-su-MWN" id="yPi-41-Pey"/>
-                        <outlet property="tinhTrang" destination="eLn-zL-UIa" id="vim-aS-IUf"/>
-                        <outlet property="urlImage" destination="XFd-N8-0ZX" id="xJv-Cb-MHQ"/>
+                        <outlet property="tinhTrang" destination="eLn-zL-UIa" id="jdY-nH-KSi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYL-ua-AtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
