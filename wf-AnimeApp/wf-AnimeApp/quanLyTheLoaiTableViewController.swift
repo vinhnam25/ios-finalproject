@@ -66,7 +66,7 @@ class quanLyTheLoaiTableViewController: UITableViewController {
             else {
                 do {
                     self.data = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String: AnyObject]]
-                    print(data!)
+                    print(data as Any)
                     //self.id = self.data["ID"] as! [[Int]]
                     //self.ten = self.data["Ten"] as! [[String]]
                     

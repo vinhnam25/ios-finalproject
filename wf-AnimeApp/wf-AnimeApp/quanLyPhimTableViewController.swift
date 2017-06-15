@@ -178,7 +178,7 @@ class themPhimTableViewController: UITableViewController {
     
     var result : String = "0"
     var isEdit : Bool = false
-    var phim : Phim!
+    //var phim : Phim!
     var item = [String : AnyObject]()
     
     @IBAction func textFieldEditingDidEnd(sender: AnyObject) {
