@@ -49,6 +49,20 @@ class listViewController: UIViewController, UICollectionViewDelegate, UICollecti
         title = "Danh sách"
     }
 
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    var viewIndicator = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 400))
+    func setLoading() {
+        
+        viewIndicator = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        activityIndicator.center = CGPoint(x: self.view.bounds.size.width/2, y: self.view.bounds.size.height/2)
+        activityIndicator.color = UIColor.black
+        activityIndicator.startAnimating()
+        viewIndicator.addSubview(activityIndicator)
+        viewIndicator.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.view.addSubview(viewIndicator)
+        
+    }
+    
     func leftBarButtonItem_click()
     {
         let sb = UIStoryboard(name: "Main", bundle: nil)
@@ -81,6 +95,8 @@ class listViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func f_CallService(type : Int , vaue : Int)
     {
+        setLoading()
+        
         self.type = type
         value = vaue
         let url: String = "http://ioswservice.somee.com/api/Phim/getbytype"
@@ -106,6 +122,7 @@ class listViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     self.list = self.respone
                     
                     OperationQueue.main.addOperation {
+                        self.viewIndicator.isHidden = true
                         self.dataCollection.reloadData()
                     }
                     
@@ -115,6 +132,7 @@ class listViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     self.isError = true
                     
                     OperationQueue.main.addOperation {
+                        self.viewIndicator.isHidden = true
                         self.dataCollection.reloadData()
                     }
                     
@@ -129,6 +147,7 @@ class listViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func f_SearchService(keyword: String, theloai : Int , loaiphim : Int, nam: Int, fansub: Int)
     {
+        setLoading()
         
         self.keyword = keyword
         self.theloai = theloai
@@ -160,6 +179,7 @@ class listViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     self.list = self.respone
                     
                     OperationQueue.main.addOperation {
+                        self.viewIndicator.isHidden = true
                         self.dataCollection.reloadData()
                     }
                     
@@ -169,6 +189,7 @@ class listViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     self.isError = true
                     
                     OperationQueue.main.addOperation {
+                        self.viewIndicator.isHidden = true
                         self.dataCollection.reloadData()
                     }
                     

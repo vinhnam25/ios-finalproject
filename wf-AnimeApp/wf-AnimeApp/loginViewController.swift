@@ -45,7 +45,7 @@ class loginViewController: UIViewController, AlertOKDelegate {
     }
     
     @IBAction func loginButton(_ sender: Any) {
-        
+
         if f_ValidateAll() == true {
             let url: String = "http://ioswservice.somee.com/api/TaiKhoan/Login"
             
@@ -80,7 +80,7 @@ class loginViewController: UIViewController, AlertOKDelegate {
                                     
                                     UserDefaults.standard.set(self.result, forKey: "dict")
                                     UserDefaults.standard.set(true, forKey: "isLogin")
-                                    
+
                                     self.f_ShowAlert_OK(title: "Thông báo", mess: "Đăng nhập thành công.", delegate: self)
                                 }
                                 else

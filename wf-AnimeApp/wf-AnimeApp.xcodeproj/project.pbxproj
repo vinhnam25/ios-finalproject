@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D1551B41EF2A4EE007F6F70 /* quanLyNSXTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1551B31EF2A4EE007F6F70 /* quanLyNSXTableViewController.swift */; };
 		3D192C6C1EF28B48009A5CB9 /* quanLyPhimTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D192C6A1EF28B48009A5CB9 /* quanLyPhimTableViewController.swift */; };
 		3D192C6D1EF28B48009A5CB9 /* quanLyTheLoaiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D192C6B1EF28B48009A5CB9 /* quanLyTheLoaiTableViewController.swift */; };
 		7F0B5E9B1EE446C500D087CD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5E9A1EE446C500D087CD /* SWRevealViewController.m */; };
 		7F0B5EA11EE456B600D087CD /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5EA01EE456B600D087CD /* menuViewController.swift */; };
 		7F0B5EA31EE4579A00D087CD /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5EA21EE4579A00D087CD /* menuTableViewCell.swift */; };
+		7F5351C91EF2BE0900E29A6B /* changeprofileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5351C81EF2BE0900E29A6B /* changeprofileTableViewController.swift */; };
 		7F5B86F91EEC5BF4004557B8 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B86F81EEC5BF4004557B8 /* DesignableImageView.swift */; };
 		7F5B86FB1EEC7313004557B8 /* eploiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B86FA1EEC7313004557B8 /* eploiseViewController.swift */; };
 		7F5B86FD1EEC75A3004557B8 /* eploiseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B86FC1EEC75A3004557B8 /* eploiseTableViewCell.swift */; };
@@ -35,6 +35,7 @@
 		7F71EB631EF27380003E4179 /* listCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71EB621EF27380003E4179 /* listCollectionReusableView.swift */; };
 		7F71EB651EF27DC0003E4179 /* accountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71EB641EF27DC0003E4179 /* accountTableViewController.swift */; };
 		7F71EB671EF27DD2003E4179 /* accountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71EB661EF27DD2003E4179 /* accountTableViewCell.swift */; };
+		7F71EB691EF29D96003E4179 /* changepassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71EB681EF29D96003E4179 /* changepassTableViewController.swift */; };
 		7FD899031ED35A6F007C9D94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD899021ED35A6F007C9D94 /* AppDelegate.swift */; };
 		7FD899081ED35A6F007C9D94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD899061ED35A6F007C9D94 /* Main.storyboard */; };
 		7FD8990D1ED35A6F007C9D94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD8990B1ED35A6F007C9D94 /* LaunchScreen.storyboard */; };
@@ -72,7 +73,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D1551B31EF2A4EE007F6F70 /* quanLyNSXTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quanLyNSXTableViewController.swift; sourceTree = "<group>"; };
 		3D192C6A1EF28B48009A5CB9 /* quanLyPhimTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quanLyPhimTableViewController.swift; sourceTree = "<group>"; };
 		3D192C6B1EF28B48009A5CB9 /* quanLyTheLoaiTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quanLyTheLoaiTableViewController.swift; sourceTree = "<group>"; };
 		7F0B5E981EE446C400D087CD /* wf-AnimeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wf-AnimeApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -80,6 +80,7 @@
 		7F0B5E9A1EE446C500D087CD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		7F0B5EA01EE456B600D087CD /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
 		7F0B5EA21EE4579A00D087CD /* menuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuTableViewCell.swift; sourceTree = "<group>"; };
+		7F5351C81EF2BE0900E29A6B /* changeprofileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changeprofileTableViewController.swift; sourceTree = "<group>"; };
 		7F5B86F81EEC5BF4004557B8 /* DesignableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageView.swift; sourceTree = "<group>"; };
 		7F5B86FA1EEC7313004557B8 /* eploiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eploiseViewController.swift; sourceTree = "<group>"; };
 		7F5B86FC1EEC75A3004557B8 /* eploiseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eploiseTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 		7F71EB621EF27380003E4179 /* listCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listCollectionReusableView.swift; sourceTree = "<group>"; };
 		7F71EB641EF27DC0003E4179 /* accountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountTableViewController.swift; sourceTree = "<group>"; };
 		7F71EB661EF27DD2003E4179 /* accountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountTableViewCell.swift; sourceTree = "<group>"; };
+		7F71EB681EF29D96003E4179 /* changepassTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changepassTableViewController.swift; sourceTree = "<group>"; };
 		7FD898FF1ED35A6F007C9D94 /* wf-AnimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wf-AnimeApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD899021ED35A6F007C9D94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FD899071ED35A6F007C9D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,16 +155,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D1551B51EF2A504007F6F70 /* quanly */ = {
-			isa = PBXGroup;
-			children = (
-				3D1551B31EF2A4EE007F6F70 /* quanLyNSXTableViewController.swift */,
-				3D192C6B1EF28B48009A5CB9 /* quanLyTheLoaiTableViewController.swift */,
-				3D192C6A1EF28B48009A5CB9 /* quanLyPhimTableViewController.swift */,
-			);
-			name = quanly;
-			sourceTree = "<group>";
-		};
 		7F0B5E971EE446A400D087CD /* plugin */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,7 +243,8 @@
 		7FD899331EE3DC30007C9D94 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				3D1551B51EF2A504007F6F70 /* quanly */,
+				3D192C6A1EF28B48009A5CB9 /* quanLyPhimTableViewController.swift */,
+				3D192C6B1EF28B48009A5CB9 /* quanLyTheLoaiTableViewController.swift */,
 				7F0B5EA01EE456B600D087CD /* menuViewController.swift */,
 				7FE83F8A1EE487E700577BC9 /* mainTableViewController.swift */,
 				7FE83F8E1EE5A28F00577BC9 /* loginViewController.swift */,
@@ -268,6 +261,8 @@
 				7F71EB5C1EF1BFE3003E4179 /* rankdetailTableViewController.swift */,
 				7F71EB5E1EF1D43F003E4179 /* whsTableViewController.swift */,
 				7F71EB641EF27DC0003E4179 /* accountTableViewController.swift */,
+				7F71EB681EF29D96003E4179 /* changepassTableViewController.swift */,
+				7F5351C81EF2BE0900E29A6B /* changeprofileTableViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -472,9 +467,9 @@
 				7F0B5E9B1EE446C500D087CD /* SWRevealViewController.m in Sources */,
 				7F71EB671EF27DD2003E4179 /* accountTableViewCell.swift in Sources */,
 				7F71EB5F1EF1D43F003E4179 /* whsTableViewController.swift in Sources */,
-				3D1551B41EF2A4EE007F6F70 /* quanLyNSXTableViewController.swift in Sources */,
 				7FE83F9F1EE7D88600577BC9 /* logoutViewController.swift in Sources */,
 				7FE83FA31EE9008300577BC9 /* detailTableViewController.swift in Sources */,
+				7F5351C91EF2BE0900E29A6B /* changeprofileTableViewController.swift in Sources */,
 				7F5B87101EF0ED05004557B8 /* listCollectionViewCell.swift in Sources */,
 				7F71EB5B1EF1BFCF003E4179 /* rankdetailTableViewCell.swift in Sources */,
 				7F5B86FB1EEC7313004557B8 /* eploiseViewController.swift in Sources */,
@@ -488,6 +483,7 @@
 				7F5B870A1EF07DBF004557B8 /* reposiTableViewCell.swift in Sources */,
 				7F0B5EA11EE456B600D087CD /* menuViewController.swift in Sources */,
 				7F5B86FF1EF0183E004557B8 /* fansubViewController.swift in Sources */,
+				7F71EB691EF29D96003E4179 /* changepassTableViewController.swift in Sources */,
 				7FE83F9B1EE7075400577BC9 /* signupViewController.swift in Sources */,
 				7FE83F971EE6E5FC00577BC9 /* DesignableButton.swift in Sources */,
 			);

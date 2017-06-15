@@ -59,6 +59,25 @@ class detailTableViewController: UITableViewController {
         title = "Thông tin phim"
     }
 
+    
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    var viewIndicator = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 400))
+    func setLoading() {
+        
+        viewIndicator = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        activityIndicator.center = CGPoint(x: self.view.bounds.size.width/2, y: self.view.bounds.size.height/2)
+        activityIndicator.color = UIColor.black
+        activityIndicator.startAnimating()
+        viewIndicator.addSubview(activityIndicator)
+        viewIndicator.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.view.addSubview(viewIndicator)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setLoading()
+    }
+    
     func leftBarButtonItem_click()
     {
         let sb = UIStoryboard(name: "Main", bundle: nil)
@@ -171,6 +190,8 @@ class detailTableViewController: UITableViewController {
         favoLabel.text = String(yeuthich)
         timeLabel.text = "\(item["ThoiLuong"] as! Int) phút"
         yearLabel.text = String(item["NamPhatHanh"] as! Int)
+        
+        viewIndicator.isHidden = true
     }
     
     @IBAction func watchButton_Click(_ sender: Any) {

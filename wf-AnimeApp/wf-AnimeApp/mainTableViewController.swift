@@ -45,8 +45,23 @@ class mainTableViewController: UITableViewController {
         
     }
     
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    var viewIndicator = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 400))
+    func setLoading() {
+        
+        viewIndicator = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        activityIndicator.center = CGPoint(x: self.view.bounds.size.width/2, y: self.view.bounds.size.height/2)
+        activityIndicator.color = UIColor.black
+        activityIndicator.startAnimating()
+        viewIndicator.addSubview(activityIndicator)
+        viewIndicator.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.view.addSubview(viewIndicator)
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         
+        setLoading()
         CallService1()
         CallService2()
         
@@ -136,7 +151,7 @@ class mainTableViewController: UITableViewController {
                     self.sectionData[1] = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [[String: AnyObject]]
                     
                     OperationQueue.main.addOperation {
-
+                        self.viewIndicator.isHidden = true
                         self.tableView.reloadData()
                         self.f_FinishService(index: 2)
                     }

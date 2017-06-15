@@ -77,12 +77,16 @@ class accountTableViewController: UITableViewController {
         
         if indexPath.row == 0 //doi mat khau
         {
-            
+            let vc = sb.instantiateViewController(withIdentifier: "vcChangePass") as! changepassTableViewController
+            let nav = UINavigationController.init(rootViewController: vc)
+            self.revealViewController().pushFrontViewController(nav, animated: true)
         }
         
         if indexPath.row  == 1 //cap nhat tai khoan
         {
-            
+            let vc = sb.instantiateViewController(withIdentifier: "vcChangePro") as! changeprofileTableViewController
+            let nav = UINavigationController.init(rootViewController: vc)
+            self.revealViewController().pushFrontViewController(nav, animated: true)
         }
         
         if indexPath.row == 2 //vao kho phim

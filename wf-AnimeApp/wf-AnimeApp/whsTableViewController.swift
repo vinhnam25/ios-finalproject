@@ -9,11 +9,14 @@
 import UIKit
 
 class whsTableViewController: UITableViewController {
-
+    
     var data : [[String: AnyObject]] = [[:]]
     var isError = 0
     var viewStyle = 0
     var result = "0"
+    
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    var viewIndicator = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 400))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +62,18 @@ class whsTableViewController: UITableViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        viewIndicator = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        activityIndicator.center = CGPoint(x: self.view.bounds.size.width/2, y: self.view.bounds.size.height/2)
+        activityIndicator.color = UIColor.black
+        activityIndicator.startAnimating()
+        viewIndicator.addSubview(activityIndicator)
+        viewIndicator.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.view.addSubview(viewIndicator)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -80,6 +95,7 @@ class whsTableViewController: UITableViewController {
 
     func f_CallService()
     {
+        
         let dict = UserDefaults.standard.value(forKey: "dict") as! [String: AnyObject]
         let id = dict["MaTK"] as! Int
         
@@ -98,6 +114,8 @@ class whsTableViewController: UITableViewController {
                     self.data = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String: AnyObject]]
                     
                     OperationQueue.main.addOperation {
+                        //self.activityIndicator.stopAnimating()
+                        self.viewIndicator.isHidden = true
                         self.tableView.reloadData()
                     }
                     
