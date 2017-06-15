@@ -169,13 +169,16 @@ class themPhimTableViewController: UITableViewController {
     @IBOutlet var soTapHienCo: UITextField!
     @IBOutlet var thoiLuong: UITextField!
     @IBOutlet var namPhatHanh: UITextField!
+    @IBOutlet var thich: UITextField!
+    @IBOutlet var xem: UITextField!
+    @IBOutlet var xephang: UITextField!
+    @IBOutlet var diem: UITextField!
     @IBOutlet var moTaPhim: UITextField!
     @IBOutlet var nsx: UITextField!
     @IBOutlet var loai: UITextField!
     @IBOutlet var tinhTrang: UITextField!
     @IBOutlet var ngayPhatHanh: UITextField!
     @IBOutlet var fansub: UITextField!
-    
     var result : String = "0"
     var isEdit : Bool = false
     //var phim : Phim!
@@ -259,16 +262,16 @@ class themPhimTableViewController: UITableViewController {
         
         let sotap = item["SoTap"] is NSNull || item["SoTap"] as! Int == 0 ? "??" : String(item["SoTap"] as! Int)
         let sotaphienco = String(item["SoTapHienCo"] as! Int)
-        //let luotxem = item["SoLuotXem"] as! NSNumber
-        //let yeuthich = item["SoLuotThich"] as! Int
+        let luotxem = item["SoLuotXem"] as! NSNumber
+        let yeuthich = item["SoLuotThich"] as! Int
         
-        //var lx: String = ""
-        //lx = numberFormatter.string(from: luotxem)!
+        var lx: String = ""
+        lx = numberFormatter.string(from: luotxem)!
         
         soTap.text = sotaphienco
         soTapHienCo.text = "\(sotap) tập"
-        //luotxemLabel.text = "\(lx) lượt"
-        //favoLabel.text = String(yeuthich)
+        xem.text = "\(lx) lượt"
+        thich.text = String(yeuthich)
         thoiLuong.text = "\(item["ThoiLuong"] as! Int) phút"
         namPhatHanh.text = String(item["NamPhatHanh"] as! Int)
     }
@@ -283,7 +286,7 @@ class themPhimTableViewController: UITableViewController {
             
             let currentdate = Date()
             
-            let postString = "ten=\(tenPhim.text!)&NhaSX=\(nsx.text!)&SoTap=\(soTap.text!)&SoTapHienCo=\(soTapHienCo.text!)&ThoiLuong=\(thoiLuong.text!)&NamPhatHanh=\(namPhatHanh.text!)&TinhTrangPhim=\(tinhTrang.text)&MoTaPhim=\(moTaPhim.text!)&LoaiPhim=\(loai.text!)&Hinh1=\(smallImage.text!)&Hinh2=\(bigImage.text!)&SoLuotXem=nil&SoLuoThich=nil&XepHang=nil&DiemDanhGia=nil&UpdateDate=\(currentdate)"
+            let postString = "ten=\(tenPhim.text!)&NhaSX=\(nsx.text!)&SoTap=\(soTap.text!)&SoTapHienCo=\(soTapHienCo.text!)&ThoiLuong=\(thoiLuong.text!)&NamPhatHanh=\(namPhatHanh.text!)&TinhTrangPhim=\(tinhTrang.text)&MoTaPhim=\(moTaPhim.text!)&LoaiPhim=\(loai.text!)&Hinh1=\(smallImage.text!)&Hinh2=\(bigImage.text!)&SoLuotXem=\(xem.text!)&SoLuoThich=\(thich.text!)&XepHang=\(xephang.text!)&DiemDanhGia=\(diem.text!)&UpdateDate=\(currentdate)"
             
             urlRequest.httpBody = postString.data(using: .utf8)
             
