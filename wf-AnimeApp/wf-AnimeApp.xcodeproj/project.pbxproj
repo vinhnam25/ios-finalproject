@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1551B81EF2DB40007F6F70 /* quanLyNSXTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1551B71EF2DB40007F6F70 /* quanLyNSXTableViewController.swift */; };
 		3D192C6C1EF28B48009A5CB9 /* quanLyPhimTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D192C6A1EF28B48009A5CB9 /* quanLyPhimTableViewController.swift */; };
 		3D192C6D1EF28B48009A5CB9 /* quanLyTheLoaiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D192C6B1EF28B48009A5CB9 /* quanLyTheLoaiTableViewController.swift */; };
 		7F0B5E9B1EE446C500D087CD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5E9A1EE446C500D087CD /* SWRevealViewController.m */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D1551B71EF2DB40007F6F70 /* quanLyNSXTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quanLyNSXTableViewController.swift; sourceTree = "<group>"; };
 		3D192C6A1EF28B48009A5CB9 /* quanLyPhimTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quanLyPhimTableViewController.swift; sourceTree = "<group>"; };
 		3D192C6B1EF28B48009A5CB9 /* quanLyTheLoaiTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quanLyTheLoaiTableViewController.swift; sourceTree = "<group>"; };
 		7F0B5E981EE446C400D087CD /* wf-AnimeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wf-AnimeApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -155,6 +157,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D1551B61EF2DB21007F6F70 /* quanly */ = {
+			isa = PBXGroup;
+			children = (
+				3D192C6A1EF28B48009A5CB9 /* quanLyPhimTableViewController.swift */,
+				3D192C6B1EF28B48009A5CB9 /* quanLyTheLoaiTableViewController.swift */,
+				3D1551B71EF2DB40007F6F70 /* quanLyNSXTableViewController.swift */,
+			);
+			name = quanly;
+			sourceTree = "<group>";
+		};
 		7F0B5E971EE446A400D087CD /* plugin */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,8 +255,7 @@
 		7FD899331EE3DC30007C9D94 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				3D192C6A1EF28B48009A5CB9 /* quanLyPhimTableViewController.swift */,
-				3D192C6B1EF28B48009A5CB9 /* quanLyTheLoaiTableViewController.swift */,
+				3D1551B61EF2DB21007F6F70 /* quanly */,
 				7F0B5EA01EE456B600D087CD /* menuViewController.swift */,
 				7FE83F8A1EE487E700577BC9 /* mainTableViewController.swift */,
 				7FE83F8E1EE5A28F00577BC9 /* loginViewController.swift */,
@@ -456,6 +467,7 @@
 				7F71EB591EF1AF05003E4179 /* rankTableViewCell.swift in Sources */,
 				3D192C6D1EF28B48009A5CB9 /* quanLyTheLoaiTableViewController.swift in Sources */,
 				7F5B870E1EF08C23004557B8 /* listViewController.swift in Sources */,
+				3D1551B81EF2DB40007F6F70 /* quanLyNSXTableViewController.swift in Sources */,
 				7F71EB631EF27380003E4179 /* listCollectionReusableView.swift in Sources */,
 				7FE83F8D1EE4891200577BC9 /* mainTableViewCell.swift in Sources */,
 				7F5B86FD1EEC75A3004557B8 /* eploiseTableViewCell.swift in Sources */,
