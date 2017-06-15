@@ -24,6 +24,17 @@ class detailTableViewController: UITableViewController {
     
     var idPhim = "0"
     var item = [String : AnyObject]()
+    var viewStyle = 0
+    var type = 0
+    var val = 0
+    
+    var keyword = ""
+    var theloai = 0
+    var loaiphim = 0
+    var nam = 0
+    var fansub = 0
+    
+    var result = "0" //nhan ket qua tra ve tu service them vao tu phim
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +62,48 @@ class detailTableViewController: UITableViewController {
     func leftBarButtonItem_click()
     {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "vcMain") as! mainTableViewController
-        let vcNav = UINavigationController.init(rootViewController: vc)
-        self.revealViewController().pushFrontViewController(vcNav, animated: true)
+        if viewStyle == 0
+        {
+            let vc = sb.instantiateViewController(withIdentifier: "vcMain") as! mainTableViewController
+            let vcNav = UINavigationController.init(rootViewController: vc)
+            self.revealViewController().pushFrontViewController(vcNav, animated: true)
+        }
+        
+        if viewStyle == 1
+        {
+            let vc = sb.instantiateViewController(withIdentifier: "vcList") as! listViewController
+            vc.viewStyle = 1
+            vc.f_CallService(type: type, vaue: val)
+            let vcNav = UINavigationController.init(rootViewController: vc)
+            self.revealViewController().pushFrontViewController(vcNav, animated: true)
+        }
+        
+        if viewStyle == 2
+        {
+            let vc = sb.instantiateViewController(withIdentifier: "vcList") as! listViewController
+            
+            vc.viewStyle = 2
+            vc.f_SearchService(keyword: keyword, theloai: theloai, loaiphim: loaiphim, nam: nam, fansub: fansub)
+            
+            let navigationView = UINavigationController.init(rootViewController: vc)
+            self.revealViewController().pushFrontViewController(navigationView, animated: true)
+        }
+        
+        if viewStyle == 3
+        {
+            let vc = sb.instantiateViewController(withIdentifier: "vcRank") as! rankdetailTableViewController
+            vc.f_CallService(loai: String(type))
+            let navigationView = UINavigationController.init(rootViewController: vc)
+            self.revealViewController().pushFrontViewController(navigationView, animated: true)
+        }
+        
+        if viewStyle == 4
+        {
+            let vc = sb.instantiateViewController(withIdentifier: "vcWhs") as! whsTableViewController
+            vc.f_CallService()
+            let navigationView = UINavigationController.init(rootViewController: vc)
+            self.revealViewController().pushFrontViewController(navigationView, animated: true)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -140,12 +190,65 @@ class detailTableViewController: UITableViewController {
         
         if isLogin
         {
-            f_ShowAlert_OK(title: "Thông báo", mess: "Đã thêm vào tủ phim")
+            let dict = UserDefaults.standard.value(forKey: "dict") as! [String: AnyObject]
+            let id = dict["MaTK"] as! Int
+            f_CallService_Add(taikhoan: id)
         }
         else
         {
             f_ShowAlert_OK(title: "Thông báo", mess: "Vui lòng đăng nhập để sử dụng chức năng này !")
         }
+    }
+    
+    func f_CallService_Add(taikhoan: Int)
+    {
+        let url: String = "http://ioswservice.somee.com/api/Phim/addtuphim"
+        
+        var urlRequest = URLRequest(url: URL(string: url)!)
+        urlRequest.httpMethod = "POST"
+        
+        let postString = "taikhoan=\(taikhoan)&maphim=\(idPhim)"
+        
+        urlRequest.httpBody = postString.data(using: .utf8)
+        
+        let tk = URLSession.shared.dataTask(with: urlRequest)
+        {
+            (data, response, error) in
+            if error != nil {
+                print("1: \(error.debugDescription)")
+            }
+            else {
+                
+                do {
+                    self.result = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! String
+                    
+                    OperationQueue.main.addOperation {
+                        
+                        if self.result == "1"
+                        {
+                            self.f_ShowAlert_OK(title: "Thông báo", mess: "Đã thêm vào tủ phim của bạn")
+                        }
+                        else if self.result == "-1"
+                        {
+                            self.f_ShowAlert_OK(title: "Thông báo", mess: "Phim đã có trong tủ phim của bạn !")
+                        }
+                        else
+                        {
+                            self.f_ShowAlert_OK(title: "Thông báo", mess: "Phim không thể thêm vào tủ phim")
+                        }
+                    }
+                    
+                }
+                catch let err as NSError {
+                    print("2 : \(err)")
+                    
+                    self.f_ShowAlert_OK(title: "Thông báo", mess: "Lỗi xử lý! Vui lòng thử lại sau.")
+                }
+            }
+        }
+        
+        tk.resume()
+
     }
     // MARK: - Table view data source
 

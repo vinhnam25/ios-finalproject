@@ -20,7 +20,11 @@ class mainTableViewController: UITableViewController {
         super.viewDidLoad()
 
         sectionData = [0: self.list1, 1: self.list2]
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
+        if let reveal = self.revealViewController() {
+            self.view.addGestureRecognizer(reveal.panGestureRecognizer())
+        }
+        
         
         // Do any additional setup after loading the view.
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(
@@ -28,7 +32,9 @@ class mainTableViewController: UITableViewController {
             style: .plain,
             target: self.revealViewController(),
             action: #selector(SWRevealViewController.revealToggle(_:))
-            )
+        )
+        
+        
         self.navigationItem.title = "AnimeFun"
         
         // Uncomment the following line to preserve selection between presentations
@@ -37,11 +43,12 @@ class mainTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        CallService1()
-        CallService2()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        CallService1()
+        CallService2()
         
         let isLogin = UserDefaults.standard.bool(forKey: "isLogin")
         
@@ -75,10 +82,11 @@ class mainTableViewController: UITableViewController {
     
     func f_GoToWhsFilm()
     {
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = sb.instantiateViewController(withIdentifier: "vcWhs") as! logoutViewController
-//        vc.modalTransitionStyle = .crossDissolve
-//        self.present(vc, animated: true, completion: nil)
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "vcWhs") as! whsTableViewController
+        vc.f_CallService()
+        let nav = UINavigationController.init(rootViewController: vc)
+        self.revealViewController().pushFrontViewController(nav, animated: true)
     }
     
     func CallService1() {

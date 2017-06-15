@@ -14,16 +14,14 @@ class menuViewController: UIViewController, UITableViewDelegate, UITableViewData
         "cell1" : "Trang chủ",
         "cell2" : "Xem danh sách phim",
         "cell3" : "Lọc phim",
-        "cell4" : "Lịch chiếu",
-        "cell5" : "Bảng xếp hạng"
+        "cell4" : "Bảng xếp hạng"
     ]
     
     var menuDictIcon = [
         "cell1" : #imageLiteral(resourceName: "icon_home"),
         "cell2" : #imageLiteral(resourceName: "icon_list"),
         "cell3" : #imageLiteral(resourceName: "icon_search"),
-        "cell4" : #imageLiteral(resourceName: "icon_cenlar"),
-        "cell5" : #imageLiteral(resourceName: "icon_rank")
+        "cell4" : #imageLiteral(resourceName: "icon_rank")
     ]
     
     @IBOutlet weak var menuTableView: UITableView!
@@ -53,6 +51,9 @@ class menuViewController: UIViewController, UITableViewDelegate, UITableViewData
             let dict = UserDefaults.standard.value(forKey: "dict") as! [String: AnyObject]
             nameLabel.text! = dict["HoTen"] as! String
             
+            menuDictText["cell5"] = "Tài khoản"
+            menuDictIcon["cell5"] = #imageLiteral(resourceName: "account_100")
+            
             menuDictText["cell6"] = "Đăng xuât"
             menuDictIcon["cell6"] = #imageLiteral(resourceName: "icon_logout")
             
@@ -69,9 +70,12 @@ class menuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         else {
             nameLabel.text! = "Khách"
+            
+            menuDictText["cell5"] = ""
             menuDictText["cell6"] = ""
             menuDictText["cell7"] = ""
             
+            menuDictText.removeValue(forKey: "cell5")
             menuDictText.removeValue(forKey: "cell6")
             menuDictIcon.removeValue(forKey: "cell7")
         }

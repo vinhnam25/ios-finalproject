@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D192C691EF27A3E009A5CB9 /* quanLyTheLoaiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D192C681EF27A3E009A5CB9 /* quanLyTheLoaiTableViewController.swift */; };
-		3D53AB1F1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53AB1E1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift */; };
-		3D53AB211EF1CC4100BE6ACF /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53AB201EF1CC4100BE6ACF /* File.swift */; };
-		3D53AB231EF1CC5500BE6ACF /* Phim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53AB221EF1CC5500BE6ACF /* Phim.swift */; };
 		7F0B5E9B1EE446C500D087CD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5E9A1EE446C500D087CD /* SWRevealViewController.m */; };
 		7F0B5EA11EE456B600D087CD /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5EA01EE456B600D087CD /* menuViewController.swift */; };
 		7F0B5EA31EE4579A00D087CD /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B5EA21EE4579A00D087CD /* menuTableViewCell.swift */; };
@@ -21,6 +17,21 @@
 		7F5B87011EF01E5C004557B8 /* fansubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B87001EF01E5C004557B8 /* fansubTableViewCell.swift */; };
 		7F5B87041EF06416004557B8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5B87031EF06415004557B8 /* MediaPlayer.framework */; };
 		7F5B87061EF06F5A004557B8 /* customViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B87051EF06F5A004557B8 /* customViewController.swift */; };
+		7F5B87081EF07218004557B8 /* customTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B87071EF07218004557B8 /* customTableViewCell.swift */; };
+		7F5B870A1EF07DBF004557B8 /* reposiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B87091EF07DBF004557B8 /* reposiTableViewCell.swift */; };
+		7F5B870C1EF07DDB004557B8 /* reposiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B870B1EF07DDB004557B8 /* reposiTableViewController.swift */; };
+		7F5B870E1EF08C23004557B8 /* listViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B870D1EF08C23004557B8 /* listViewController.swift */; };
+		7F5B87101EF0ED05004557B8 /* listCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B870F1EF0ED05004557B8 /* listCollectionViewCell.swift */; };
+		7F5B87121EF12BAB004557B8 /* filterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B87111EF12BAB004557B8 /* filterTableViewController.swift */; };
+		7F71EB571EF1AEF5003E4179 /* rankmenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71EB561EF1AEF5003E4179 /* rankmenuTableViewController.swift */; };
+		7F71EB591EF1AF05003E4179 /* rankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71EB581EF1AF05003E4179 /* rankTableViewCell.swift */; };
+		7F71EB5B1EF1BFCF003E4179 /* rankdetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71EB5A1EF1BFCF003E4179 /* rankdetailTableViewCell.swift */; };
+		7F71EB5D1EF1BFE3003E4179 /* rankdetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71EB5C1EF1BFE3003E4179 /* rankdetailTableViewController.swift */; };
+		7F71EB5F1EF1D43F003E4179 /* whsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71EB5E1EF1D43F003E4179 /* whsTableViewController.swift */; };
+		7F71EB611EF1D44F003E4179 /* whsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71EB601EF1D44F003E4179 /* whsTableViewCell.swift */; };
+		7F71EB631EF27380003E4179 /* listCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71EB621EF27380003E4179 /* listCollectionReusableView.swift */; };
+		7F71EB651EF27DC0003E4179 /* accountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71EB641EF27DC0003E4179 /* accountTableViewController.swift */; };
+		7F71EB671EF27DD2003E4179 /* accountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71EB661EF27DD2003E4179 /* accountTableViewCell.swift */; };
 		7FD899031ED35A6F007C9D94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD899021ED35A6F007C9D94 /* AppDelegate.swift */; };
 		7FD899081ED35A6F007C9D94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD899061ED35A6F007C9D94 /* Main.storyboard */; };
 		7FD8990D1ED35A6F007C9D94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD8990B1ED35A6F007C9D94 /* LaunchScreen.storyboard */; };
@@ -58,10 +69,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D192C681EF27A3E009A5CB9 /* quanLyTheLoaiTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quanLyTheLoaiTableViewController.swift; sourceTree = "<group>"; };
-		3D53AB1E1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quanLyPhimTableViewController.swift; sourceTree = "<group>"; };
-		3D53AB201EF1CC4100BE6ACF /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		3D53AB221EF1CC5500BE6ACF /* Phim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phim.swift; sourceTree = "<group>"; };
 		7F0B5E981EE446C400D087CD /* wf-AnimeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wf-AnimeApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		7F0B5E991EE446C500D087CD /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		7F0B5E9A1EE446C500D087CD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -74,6 +81,21 @@
 		7F5B87001EF01E5C004557B8 /* fansubTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fansubTableViewCell.swift; sourceTree = "<group>"; };
 		7F5B87031EF06415004557B8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		7F5B87051EF06F5A004557B8 /* customViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customViewController.swift; sourceTree = "<group>"; };
+		7F5B87071EF07218004557B8 /* customTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customTableViewCell.swift; sourceTree = "<group>"; };
+		7F5B87091EF07DBF004557B8 /* reposiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reposiTableViewCell.swift; sourceTree = "<group>"; };
+		7F5B870B1EF07DDB004557B8 /* reposiTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reposiTableViewController.swift; sourceTree = "<group>"; };
+		7F5B870D1EF08C23004557B8 /* listViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listViewController.swift; sourceTree = "<group>"; };
+		7F5B870F1EF0ED05004557B8 /* listCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F5B87111EF12BAB004557B8 /* filterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filterTableViewController.swift; sourceTree = "<group>"; };
+		7F71EB561EF1AEF5003E4179 /* rankmenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rankmenuTableViewController.swift; sourceTree = "<group>"; };
+		7F71EB581EF1AF05003E4179 /* rankTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rankTableViewCell.swift; sourceTree = "<group>"; };
+		7F71EB5A1EF1BFCF003E4179 /* rankdetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rankdetailTableViewCell.swift; sourceTree = "<group>"; };
+		7F71EB5C1EF1BFE3003E4179 /* rankdetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rankdetailTableViewController.swift; sourceTree = "<group>"; };
+		7F71EB5E1EF1D43F003E4179 /* whsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = whsTableViewController.swift; sourceTree = "<group>"; };
+		7F71EB601EF1D44F003E4179 /* whsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = whsTableViewCell.swift; sourceTree = "<group>"; };
+		7F71EB621EF27380003E4179 /* listCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listCollectionReusableView.swift; sourceTree = "<group>"; };
+		7F71EB641EF27DC0003E4179 /* accountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountTableViewController.swift; sourceTree = "<group>"; };
+		7F71EB661EF27DD2003E4179 /* accountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountTableViewCell.swift; sourceTree = "<group>"; };
 		7FD898FF1ED35A6F007C9D94 /* wf-AnimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wf-AnimeApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD899021ED35A6F007C9D94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FD899071ED35A6F007C9D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -206,8 +228,6 @@
 				7FE83F921EE6D3A600577BC9 /* DesignableLable.swift */,
 				7FE83F961EE6E5FC00577BC9 /* DesignableButton.swift */,
 				7F5B86F81EEC5BF4004557B8 /* DesignableImageView.swift */,
-				3D53AB201EF1CC4100BE6ACF /* File.swift */,
-				3D53AB221EF1CC5500BE6ACF /* Phim.swift */,
 			);
 			name = class;
 			sourceTree = "<group>";
@@ -224,8 +244,13 @@
 				7F5B86FA1EEC7313004557B8 /* eploiseViewController.swift */,
 				7F5B86FE1EF0183E004557B8 /* fansubViewController.swift */,
 				7F5B87051EF06F5A004557B8 /* customViewController.swift */,
-				3D53AB1E1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift */,
-				3D192C681EF27A3E009A5CB9 /* quanLyTheLoaiTableViewController.swift */,
+				7F5B870B1EF07DDB004557B8 /* reposiTableViewController.swift */,
+				7F5B870D1EF08C23004557B8 /* listViewController.swift */,
+				7F5B87111EF12BAB004557B8 /* filterTableViewController.swift */,
+				7F71EB561EF1AEF5003E4179 /* rankmenuTableViewController.swift */,
+				7F71EB5C1EF1BFE3003E4179 /* rankdetailTableViewController.swift */,
+				7F71EB5E1EF1D43F003E4179 /* whsTableViewController.swift */,
+				7F71EB641EF27DC0003E4179 /* accountTableViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -262,6 +287,14 @@
 				7FE83F8C1EE4891200577BC9 /* mainTableViewCell.swift */,
 				7F5B86FC1EEC75A3004557B8 /* eploiseTableViewCell.swift */,
 				7F5B87001EF01E5C004557B8 /* fansubTableViewCell.swift */,
+				7F5B87071EF07218004557B8 /* customTableViewCell.swift */,
+				7F5B87091EF07DBF004557B8 /* reposiTableViewCell.swift */,
+				7F5B870F1EF0ED05004557B8 /* listCollectionViewCell.swift */,
+				7F71EB581EF1AF05003E4179 /* rankTableViewCell.swift */,
+				7F71EB5A1EF1BFCF003E4179 /* rankdetailTableViewCell.swift */,
+				7F71EB601EF1D44F003E4179 /* whsTableViewCell.swift */,
+				7F71EB621EF27380003E4179 /* listCollectionReusableView.swift */,
+				7F71EB661EF27DD2003E4179 /* accountTableViewCell.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -404,24 +437,35 @@
 				7F5B86F91EEC5BF4004557B8 /* DesignableImageView.swift in Sources */,
 				7FD8993A1EE3DDA4007C9D94 /* UIImageView+ShowImgFrom.swift in Sources */,
 				7FE83F911EE5E81400577BC9 /* DesignableTextField.swift in Sources */,
+				7F5B870C1EF07DDB004557B8 /* reposiTableViewController.swift in Sources */,
 				7FE83F931EE6D3A600577BC9 /* DesignableLable.swift in Sources */,
+				7F5B87081EF07218004557B8 /* customTableViewCell.swift in Sources */,
+				7F71EB591EF1AF05003E4179 /* rankTableViewCell.swift in Sources */,
+				7F5B870E1EF08C23004557B8 /* listViewController.swift in Sources */,
+				7F71EB631EF27380003E4179 /* listCollectionReusableView.swift in Sources */,
 				7FE83F8D1EE4891200577BC9 /* mainTableViewCell.swift in Sources */,
 				7F5B86FD1EEC75A3004557B8 /* eploiseTableViewCell.swift in Sources */,
-				3D53AB211EF1CC4100BE6ACF /* File.swift in Sources */,
 				7F5B87011EF01E5C004557B8 /* fansubTableViewCell.swift in Sources */,
 				7FD899031ED35A6F007C9D94 /* AppDelegate.swift in Sources */,
 				7FE83F8B1EE487E700577BC9 /* mainTableViewController.swift in Sources */,
 				7FE83F8F1EE5A28F00577BC9 /* loginViewController.swift in Sources */,
+				7F71EB5D1EF1BFE3003E4179 /* rankdetailTableViewController.swift in Sources */,
 				7F0B5E9B1EE446C500D087CD /* SWRevealViewController.m in Sources */,
+				7F71EB671EF27DD2003E4179 /* accountTableViewCell.swift in Sources */,
+				7F71EB5F1EF1D43F003E4179 /* whsTableViewController.swift in Sources */,
 				7FE83F9F1EE7D88600577BC9 /* logoutViewController.swift in Sources */,
-				3D192C691EF27A3E009A5CB9 /* quanLyTheLoaiTableViewController.swift in Sources */,
 				7FE83FA31EE9008300577BC9 /* detailTableViewController.swift in Sources */,
+				7F5B87101EF0ED05004557B8 /* listCollectionViewCell.swift in Sources */,
+				7F71EB5B1EF1BFCF003E4179 /* rankdetailTableViewCell.swift in Sources */,
 				7F5B86FB1EEC7313004557B8 /* eploiseViewController.swift in Sources */,
+				7F71EB651EF27DC0003E4179 /* accountTableViewController.swift in Sources */,
+				7F5B87121EF12BAB004557B8 /* filterTableViewController.swift in Sources */,
 				7F5B87061EF06F5A004557B8 /* customViewController.swift in Sources */,
-				3D53AB1F1EF07E1500BE6ACF /* quanLyPhimTableViewController.swift in Sources */,
+				7F71EB611EF1D44F003E4179 /* whsTableViewCell.swift in Sources */,
+				7F71EB571EF1AEF5003E4179 /* rankmenuTableViewController.swift in Sources */,
 				7FE83F9D1EE717A600577BC9 /* UIAlert+ShowAlert.swift in Sources */,
 				7F0B5EA31EE4579A00D087CD /* menuTableViewCell.swift in Sources */,
-				3D53AB231EF1CC5500BE6ACF /* Phim.swift in Sources */,
+				7F5B870A1EF07DBF004557B8 /* reposiTableViewCell.swift in Sources */,
 				7F0B5EA11EE456B600D087CD /* menuViewController.swift in Sources */,
 				7F5B86FF1EF0183E004557B8 /* fansubViewController.swift in Sources */,
 				7FE83F9B1EE7075400577BC9 /* signupViewController.swift in Sources */,
